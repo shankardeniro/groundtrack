@@ -8,6 +8,7 @@ import { Panel } from './ui/panel';
 import { Legend } from './ui/legend';
 import { Search } from './ui/search';
 import { Stats } from './ui/stats';
+import { Chooser } from './ui/chooser';
 import { Tour } from './tour';
 
 // ────────────────────────── starfield backdrop ──────────────────────────
@@ -59,8 +60,14 @@ const legend = new Legend(() => {
   if (openCountry) stats.show(openCountry, isVisible);
 });
 
+const chooser = new Chooser((e) => selectEntity(e, { fly: false }));
+
 const map = new MapView(document.getElementById('map')!, ENTITIES, {
   onEntityClick: (e) => selectEntity(e, { fly: false }),
+  onClusterClick: (members, x, y) => {
+    tooltip.hide();
+    chooser.show(members, x, y);
+  },
   onCountryClick: (name) => showCountry(name),
   onBackgroundClick: () => {
     if (!tour.running) clearSelection();
@@ -72,6 +79,7 @@ const tour = new Tour(
   (e) => {
     // during the tour the caption card narrates; keep the big panel closed
     panel.hide();
+    chooser.hide();
     stats.hide();
     openCountry = null;
     map.highlightCountry(null);
@@ -109,6 +117,7 @@ let selected: SpaceEntity | null = null;
 function selectEntity(e: SpaceEntity, opts: { fly?: boolean } = {}): void {
   if (tour.running) tour.stop();
   tooltip.hide();
+  chooser.hide();
   stats.hide();
   openCountry = null;
   selected = e;
@@ -119,6 +128,7 @@ function selectEntity(e: SpaceEntity, opts: { fly?: boolean } = {}): void {
 
 function showCountry(name: string): void {
   if (tour.running) tour.stop();
+  chooser.hide();
   selected = null;
   map.select(null);
   panel.hide();
@@ -132,6 +142,7 @@ function clearSelection(): void {
   selected = null;
   map.select(null);
   panel.hide();
+  chooser.hide();
   stats.hide();
   openCountry = null;
   map.highlightCountry(null);

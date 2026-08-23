@@ -119,6 +119,7 @@ Sanctioned motion: camera flights (1.5s, `easeCubicInOut`, long hops dip out fir
 - **Tooltip** (glass 1): entity name at `--fs-sub`, category dot row, muted hint line. Follows cursor, never intercepts it.
 - **Country stats card** (top-left, glass 2): country name at display size, muted total, categories as micro-label groups with clickable entity rows (accent-soft hover).
 - **Profile panel** (right, glass 2, 420px): category chip (pill, category color at 12% fill) → name → meta row → website link → body paragraphs → micro-label sections (programs, milestones as an accent-ruled timeline with tabular years, achievements, connections as inset rows with dot + relation phrase, tags as pills). Bottom sheet ≤ 720px.
+- **Cluster chooser** (glass 2 popover at the click point): appears when a clicked cluster's members are too co-located for zooming to ever separate (e.g. KSC / Cape Canaveral) — micro-label header ("N ORGANIZATIONS HERE") over clickable entity rows.
 - **Tour card** (bottom-center, glass 2): "STOP n OF 10" eyebrow in accent, stop name, caption, Back / Next (primary) / Exit controls.
 
 ## 8. Accessibility

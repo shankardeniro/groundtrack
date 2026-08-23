@@ -612,6 +612,43 @@ select {
   color: var(--muted);
 }
 
+/* ────────────── cluster chooser ────────────── */
+#cluster-pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 35;
+  min-width: 240px;
+  max-width: 320px;
+  max-height: 50vh;
+  overflow-y: auto;
+  background: var(--glass-2);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--r-card);
+  padding: var(--sp-2);
+  backdrop-filter: blur(var(--blur-2));
+  box-shadow: var(--shadow-card);
+  animation: pop-in var(--t-base) var(--ease);
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    scale: 0.96;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.chooser-title {
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--muted);
+  padding: var(--sp-1) var(--sp-2) var(--sp-2);
+}
+
 /* ────────────── tooltip ────────────── */
 #tooltip {
   position: fixed;

@@ -7,6 +7,8 @@ import type { SpaceEntity } from './types';
 
 export interface MapCallbacks {
   onEntityClick(e: SpaceEntity): void;
+  /** A cluster that zooming cannot split apart was clicked. */
+  onClusterClick(members: SpaceEntity[], x: number, y: number): void;
   onCountryClick(name: string): void;
   onBackgroundClick(): void;
   /** Hover feedback; `html === null` hides the tooltip. */
@@ -484,8 +486,24 @@ export class MapView {
       event.stopPropagation();
       if (c.members.length === 1) {
         this.cb.onEntityClick(c.members[0]);
+        return;
+      }
+      // Would zooming in actually split this cluster? Members that are
+      // essentially co-located (KSC and Cape Canaveral, for example) never
+      // separate — offer a chooser instead of a dead-end zoom.
+      const zoomFactor = Math.min(MAX_K, this.k * 2.6) / this.k;
+      let spread = 0;
+      for (let i = 0; i < c.members.length; i++) {
+        for (let j = i + 1; j < c.members.length; j++) {
+          const a = this.screenPos(c.members[i]);
+          const b = this.screenPos(c.members[j]);
+          if (a && b) spread = Math.max(spread, Math.hypot(a[0] - b[0], a[1] - b[1]));
+        }
+      }
+      if (zoomFactor <= 1.05 || spread * zoomFactor < CLUSTER_RADIUS) {
+        const ev = event as PointerEvent;
+        this.cb.onClusterClick(c.members, ev.clientX ?? this.width / 2, ev.clientY ?? this.height / 2);
       } else {
-        // zoom in on the cluster to split it apart
         this.flyTo([-c.lng, -c.lat], Math.min(MAX_K, this.k * 2.6), 900);
       }
     });
