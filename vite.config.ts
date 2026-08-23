@@ -7,7 +7,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile';
 // what the Claude Artifact deployment uses.
 export default defineConfig(({ mode }) => ({
   // Relative base so the build works at any mount path (GitHub Pages serves
-  // this app from /orbital-atlas/).
+  // this app from /groundtrack/).
   base: './',
   plugins: mode === 'single' ? [viteSingleFile()] : [],
   build: mode === 'single' ? { assetsInlineLimit: 100_000_000 } : {},

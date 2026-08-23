@@ -2,10 +2,10 @@
 
 An interactive 3D globe of the global space exploration ecosystem — agencies, startups, manufacturers, R&D labs, launch sites, ground stations, and investors — rendered in a dark space theme with glowing pins, great-circle relationship arcs, and a guided tour that flies around the planet.
 
-**Live: [shankardeniro.github.io/orbital-atlas](https://shankardeniro.github.io/orbital-atlas/)**
+**Live: [shankardeniro.github.io/groundtrack](https://shankardeniro.github.io/groundtrack/)**
 
 ![Stack](https://img.shields.io/badge/stack-Vite%20%2B%20TypeScript%20%2B%20D3-blue)
-[![Deploy](https://github.com/shankardeniro/orbital-atlas/actions/workflows/deploy.yml/badge.svg)](https://github.com/shankardeniro/orbital-atlas/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/shankardeniro/groundtrack/actions/workflows/deploy.yml/badge.svg)](https://github.com/shankardeniro/groundtrack/actions/workflows/deploy.yml)
 
 ## Running it
 
@@ -23,7 +23,7 @@ No backend, no API keys, no tile servers — the world geometry ships with the a
 
 ## Deployment
 
-Every push to `main` builds and deploys the site to [GitHub Pages](https://shankardeniro.github.io/orbital-atlas/) via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). `npm run build:single` additionally produces `dist/orbital-atlas-artifact.html`, a fully self-contained single file used for the Claude Artifact deployment.
+Every push to `main` builds and deploys the site to [GitHub Pages](https://shankardeniro.github.io/groundtrack/) via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). `npm run build:single` additionally produces `dist/orbital-atlas-artifact.html`, a fully self-contained single file used for the Claude Artifact deployment.
 
 ## Using the app
 
