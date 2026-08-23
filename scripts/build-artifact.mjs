@@ -19,6 +19,8 @@ const body = html
   .trim();
 if (scripts.length === 0) throw new Error('no inline <script> found — build with --mode single first');
 
-const out = `<title>Orbital Atlas</title>\n${fontLinks.join('\n')}\n${styles.join('\n')}\n${body}\n${scripts.join('\n')}\n`;
+const out = `<title>Groundtrack</title>\n${fontLinks.join('\n')}\n${styles.join('\n')}\n${body}\n${scripts.join('\n')}\n`;
+// Filename is kept from the original deployment — the published Artifact URL
+// is tied to this path, so renaming the file would create a new artifact.
 writeFileSync('dist/orbital-atlas-artifact.html', out);
 console.log(`dist/orbital-atlas-artifact.html written (${(out.length / 1024 / 1024).toFixed(2)} MB)`);

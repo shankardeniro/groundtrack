@@ -1,6 +1,6 @@
-# Orbital Atlas — Design System
+# Groundtrack — Design System
 
-The visual identity of Orbital Atlas: a night-side view of Earth as an instrument you can hold. The UI floats over the globe as frosted glass; the data provides the color. This document is the source of truth — the tokens in [`src/styles/tokens.css`](src/styles/tokens.css) implement it.
+The visual identity of Groundtrack: a night-side view of Earth as an instrument you can hold. The name is the concept — a satellite's groundtrack is its path projected onto Earth's surface, and the site projects the whole space ecosystem back onto the globe. The UI floats over the globe as frosted glass; the data provides the color. This document is the source of truth — the tokens in [`src/styles/tokens.css`](src/styles/tokens.css) implement it.
 
 ## 1. Principles
 
