@@ -379,17 +379,26 @@ select {
   color: var(--text);
   border-color: var(--accent);
 }
+/* Category eyebrow: uncontained uppercase micro-label with a glowing dot,
+ * echoing the panel's section headings and the legend's dot language. */
 .chip {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: var(--r-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: var(--fs-micro);
   font-weight: 600;
-  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
   color: var(--chip);
-  border: 1px solid var(--chip);
-  background: color-mix(in srgb, var(--chip) 12%, transparent);
   margin-bottom: 10px;
+}
+.chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--chip);
+  box-shadow: 0 0 6px var(--chip);
+  flex-shrink: 0;
 }
 #panel h2,
 #stats h2 {

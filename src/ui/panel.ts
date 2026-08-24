@@ -24,7 +24,7 @@ export class Panel {
     this.el.innerHTML = `
       <button class="panel-close" aria-label="Close profile">×</button>
       <div class="panel-scroll">
-        <span class="chip" style="--chip:${meta.color}">${meta.label}</span>
+        <span class="chip" style="--chip:${meta.color}"><span class="chip-dot"></span>${meta.label}</span>
         <h2>${e.name}</h2>
         <div class="panel-meta">
           <span>📍 ${e.city}, ${e.country}</span>
