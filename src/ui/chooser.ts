@@ -11,8 +11,10 @@ export class Chooser {
   constructor(private onSelect: (e: SpaceEntity) => void) {}
 
   show(members: SpaceEntity[], x: number, y: number): void {
+    const uniform = members.every((m) => m.category === members[0].category);
+    const color = uniform ? CATEGORIES[members[0].category].color : 'var(--cat-mixed)';
     this.el.innerHTML =
-      `<div class="chooser-title">${members.length} organizations here</div>` +
+      `<div class="chooser-title" style="--chip:${color}"><span class="chip-dot"></span>${members.length} organizations here</div>` +
       members
         .map(
           (e, i) =>

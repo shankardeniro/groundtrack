@@ -658,12 +658,16 @@ select {
     scale: 1;
   }
 }
+/* Eyebrow; dot takes the cluster's category color (neutral when mixed). */
 .chooser-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-size: var(--fs-micro);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--track-label);
-  color: var(--muted);
+  color: var(--chip, var(--muted));
   padding: var(--sp-1) var(--sp-2) var(--sp-2);
 }
 
