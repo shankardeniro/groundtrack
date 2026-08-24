@@ -10,7 +10,8 @@ Vehicle photographs in `src/assets/vehicles/` (resized copies; all licenses veri
 | `vulcan.jpg` | Vulcan Centaur (Cert-1 launch) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ULA%27s_Vulcan_VC2S_rocket_launch_(8192711).jpg) | U.S. Space Force, photo by A1C Spencer Contreras | Public domain (U.S. federal government work) |
 | `alpha.jpg` | Firefly Alpha (maiden flight) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Firefly_Alpha_1st_Flight.jpg) | Photographer Alejandro Valdez, uploaded by JacobRendon | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — resized copy shared under the same license |
 | `vikram1.jpg` | Vikram-1 (on the pad at SDSC SHAR) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Skyroot%E2%80%99s_Vikram-I_on_the_Launch_Pad_at_SDSC_SHAR_(cropped).webp) | ISRO | [GODL-India](https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf) (Commons license review pending at time of use) |
+| `ariane6.jpg` | Ariane 6 (full-scale vehicle on the pad, Kourou) | [ESA media kit cover](https://www.esa.int/ESA_Multimedia/Images/2024/04/Ariane_6_media_kit_cover) | ESA | [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/) (dual-licensed by ESA on the source page) — resized copy shared under the same license |
 
-Vehicles without a verifiably free photograph (Ariane 6, Zhuque-2, Spectrum, Terran R, Agnibaan) are shown as stylized procedural 3D models instead — see `src/data/vehicles.ts`.
+Vehicles without a verifiably free photograph (Zhuque-2, Spectrum, Terran R, Agnibaan) show a specification table only — no imagery.
 
 World geometry: [world-atlas](https://github.com/topojson/world-atlas) (Natural Earth data, public domain). Typeface: [Sora](https://fonts.google.com/specimen/Sora) (SIL Open Font License).

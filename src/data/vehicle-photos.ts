@@ -4,6 +4,7 @@ import newglenn from '../assets/vehicles/newglenn.jpg';
 import vulcan from '../assets/vehicles/vulcan.jpg';
 import alpha from '../assets/vehicles/alpha.jpg';
 import vikram1 from '../assets/vehicles/vikram1.jpg';
+import ariane6 from '../assets/vehicles/ariane6.jpg';
 
 /**
  * Real photographs for flagship vehicles, keyed by entity id. All images are
@@ -54,5 +55,17 @@ export const VEHICLE_PHOTOS: Record<string, VehiclePhoto> = {
     alt: 'Vikram-1 vertical on the launch pad at Satish Dhawan Space Centre',
     credit: 'ISRO',
     license: 'GODL-India',
+  },
+  arianespace: {
+    src: ariane6,
+    alt: 'Full-scale Ariane 6 standing on the launch pad at Europe’s Spaceport in Kourou',
+    credit: 'ESA',
+    license: 'CC BY-SA 3.0 IGO',
+  },
+  arianegroup: {
+    src: ariane6,
+    alt: 'Full-scale Ariane 6 standing on the launch pad at Europe’s Spaceport in Kourou',
+    credit: 'ESA',
+    license: 'CC BY-SA 3.0 IGO',
   },
 };

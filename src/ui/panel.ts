@@ -3,7 +3,7 @@ import type { SpaceEntity } from '../types';
 import { ENTITIES, ENTITY_BY_ID } from '../data/entities';
 import { VEHICLE_BY_ENTITY } from '../data/vehicles';
 import { VEHICLE_PHOTOS } from '../data/vehicle-photos';
-import { VehicleViewer, openVehicleOverlay, openPhotoOverlay } from '../vehicle3d';
+import { openPhotoOverlay } from './photo-overlay';
 
 export interface PanelCallbacks {
   onNavigate(e: SpaceEntity): void;
@@ -13,7 +13,6 @@ export interface PanelCallbacks {
 /** Slide-in profile panel (bottom sheet on mobile). */
 export class Panel {
   private el = document.getElementById('panel') as HTMLElement;
-  private viewer: VehicleViewer | null = null;
 
   constructor(private cb: PanelCallbacks) {}
 
@@ -42,18 +41,18 @@ export class Panel {
         ${
           vehicle
             ? `<h3>Flagship vehicle</h3>
-               <div class="vehicle-box">
-                 ${
-                   photo
-                     ? `<img class="vehicle-photo" src="${photo.src}" alt="${photo.alt}" />`
-                     : `<canvas class="vehicle-canvas" aria-label="Stylized 3D model of ${vehicle.name}"></canvas>`
-                 }
-                 <div class="vehicle-caption">
-                   <strong>${vehicle.name}</strong>
-                   <span>${photo ? `Photo: ${photo.credit} · ${photo.license}` : `${vehicle.heightM} m · stylized · drag to rotate`}</span>
-                   <button class="vehicle-expand">Expand ⤢</button>
-                 </div>
-               </div>
+               ${
+                 photo
+                   ? `<div class="vehicle-box">
+                        <img class="vehicle-photo" src="${photo.src}" alt="${photo.alt}" />
+                        <div class="vehicle-caption">
+                          <strong>${vehicle.name}</strong>
+                          <span>Photo: ${photo.credit} · ${photo.license}</span>
+                          <button class="vehicle-expand">Expand ⤢</button>
+                        </div>
+                      </div>`
+                   : ''
+               }
                <div class="vehicle-specs">
                  ${[
                    ['Height', `${vehicle.heightM} m`],
@@ -117,24 +116,16 @@ export class Panel {
     this.el.hidden = false;
     this.el.querySelector('.panel-scroll')!.scrollTop = 0;
 
-    this.viewer?.destroy();
-    this.viewer = null;
-    if (vehicle) {
-      if (!photo) {
-        // create after unhiding so the canvas has real layout dimensions
-        this.viewer = new VehicleViewer(this.el.querySelector('.vehicle-canvas')!, vehicle);
-      }
-      this.el.querySelector('.vehicle-expand')!.addEventListener('click', () =>
-        photo
-          ? openPhotoOverlay(vehicle.name, `Photo: ${photo.credit} · ${photo.license}`, photo.src, photo.alt)
-          : openVehicleOverlay(vehicle),
-      );
+    if (vehicle && photo) {
+      this.el
+        .querySelector('.vehicle-expand')!
+        .addEventListener('click', () =>
+          openPhotoOverlay(vehicle.name, `Photo: ${photo.credit} · ${photo.license}`, photo.src, photo.alt),
+        );
     }
   }
 
   hide(): void {
-    this.viewer?.destroy();
-    this.viewer = null;
     this.el.hidden = true;
   }
 

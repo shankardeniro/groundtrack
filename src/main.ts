@@ -9,7 +9,7 @@ import { Legend } from './ui/legend';
 import { Search } from './ui/search';
 import { Stats } from './ui/stats';
 import { Chooser } from './ui/chooser';
-import { closeVehicleOverlay } from './vehicle3d';
+import { closeVehicleOverlay } from './ui/photo-overlay';
 import { Tour } from './tour';
 
 // ────────────────────────── starfield backdrop ──────────────────────────
