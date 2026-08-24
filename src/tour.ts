@@ -1,4 +1,5 @@
 import { ENTITY_BY_ID } from './data/entities';
+import { CATEGORIES } from './types';
 import type { SpaceEntity } from './types';
 
 interface TourStop {
@@ -57,7 +58,7 @@ export class Tour {
     const stop = STOPS[this.index];
     const e = ENTITY_BY_ID.get(stop.id)!;
     this.card.innerHTML = `
-      <div class="tour-step">Stop ${this.index + 1} of ${STOPS.length}</div>
+      <div class="tour-step" style="--chip:${CATEGORIES[e.category].color}"><span class="chip-dot"></span>Stop ${this.index + 1} of ${STOPS.length}</div>
       <div class="tour-name">${e.name}</div>
       <p>${stop.caption}</p>
       <div class="tour-controls">

@@ -576,12 +576,16 @@ select {
     transform: translate(-50%, 0);
   }
 }
+/* Eyebrow, colored by the current stop's category. */
 .tour-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-size: var(--fs-micro);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--track-label);
-  color: var(--accent);
+  color: var(--chip, var(--accent));
   font-variant-numeric: tabular-nums;
 }
 .tour-name {
