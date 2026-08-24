@@ -66,7 +66,7 @@ export class Panel {
             : ''
         }
 
-        <div class="tags">${e.tags.map((t) => `<span class="tag">#${t}</span>`).join('')}</div>
+        <div class="tags">${e.tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>
       </div>`;
 
     this.el.querySelector('.panel-close')!.addEventListener('click', () => this.cb.onClose());

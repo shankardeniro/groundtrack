@@ -492,18 +492,17 @@ select {
 .rel-text {
   color: var(--muted);
 }
+/* Tags as a quiet interpunct-separated line — the panel ends without chrome,
+ * echoing the meta row at the top. */
 .tags {
   margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.tag {
-  font-size: var(--fs-micro);
+  font-size: var(--fs-ui);
   color: var(--muted);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--r-pill);
-  padding: 3px 9px;
+  line-height: 1.9;
+}
+.tag + .tag::before {
+  content: '·';
+  margin: 0 var(--sp-2);
 }
 
 /* stats card */

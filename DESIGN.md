@@ -84,7 +84,7 @@ Rules: section headings inside panels are micro labels in `--accent`. Years and 
 | `--r-control` | 10px | Inputs, buttons, small rows |
 | `--r-card` | 12px | Legend, tooltip, relation cards |
 | `--r-panel` | 16px | Panels, stats, tour card |
-| `--r-pill` | 999px | Chips, tags, category badge |
+| `--r-pill` | 999px | Reserved for pill moments (currently unused — chips became eyebrows, tags became an inline list) |
 
 **Surfaces** — two frosted-glass elevations over the scene plus one inset:
 
@@ -118,7 +118,7 @@ Sanctioned motion: camera flights (1.5s, `easeCubicInOut`, long hops dip out fir
 - **Legend** (bottom-left, glass 1): micro-label title, rows of 10px category dots with soft glow; toggled-off rows drop to 35% opacity.
 - **Tooltip** (glass 1): entity name at `--fs-sub`, category dot row, muted hint line. Follows cursor, never intercepts it.
 - **Country stats card** (top-left, glass 2): country name at display size, muted total, categories as eyebrow group headers (category-colored uppercase micro-label with glowing dot, muted tabular count) over clickable entity rows (accent-soft hover).
-- **Profile panel** (right, glass 2, 420px): category eyebrow (uncontained uppercase micro-label with a glowing category-colored dot — same vocabulary as the section headings and legend) → name → meta row → website link → body paragraphs → micro-label sections (programs, milestones as an accent-ruled timeline with tabular years, achievements, connections as inset rows with dot + relation phrase, tags as pills). Bottom sheet ≤ 720px.
+- **Profile panel** (right, glass 2, 420px): category eyebrow (uncontained uppercase micro-label with a glowing category-colored dot — same vocabulary as the section headings and legend) → name → meta row → website link → body paragraphs → micro-label sections (programs, milestones as an accent-ruled timeline with tabular years, achievements, connections as inset rows with dot + relation phrase, tags as a muted interpunct-separated line — no chrome, echoing the meta row so the panel opens and closes quietly). Bottom sheet ≤ 720px.
 - **Cluster chooser** (glass 2 popover at the click point): appears when a clicked cluster's members are too co-located for zooming to ever separate (e.g. KSC / Cape Canaveral) — eyebrow header ("N ORGANIZATIONS HERE", dot + label in the cluster's category color, neutral `--cat-mixed` when mixed) over clickable entity rows.
 - **Tour card** (bottom-center, glass 2): "STOP n OF 10" eyebrow (dot + label in the current stop's category color), stop name, caption, Back / Next (primary) / Exit controls.
 
