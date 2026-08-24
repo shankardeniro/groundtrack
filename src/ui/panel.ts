@@ -47,6 +47,19 @@ export class Panel {
                    <span>${vehicle.heightM} m · stylized · drag to rotate</span>
                    <button class="vehicle-expand">Expand ⤢</button>
                  </div>
+               </div>
+               <div class="vehicle-specs">
+                 ${[
+                   ['Height', `${vehicle.heightM} m`],
+                   ['Diameter', vehicle.stats.diameter],
+                   ['Payload · LEO', vehicle.stats.payloadLeo],
+                   ['Stages', vehicle.stats.stages],
+                   ['Engines', vehicle.stats.engines],
+                   ['Propellant', vehicle.stats.propellant],
+                   ['First flight', vehicle.stats.firstFlight],
+                 ]
+                   .map(([k, v]) => `<div class="vspec"><span>${k}</span><strong>${v}</strong></div>`)
+                   .join('')}
                </div>`
             : ''
         }

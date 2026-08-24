@@ -699,6 +699,33 @@ select {
 .vehicle-expand:hover {
   border-color: var(--accent);
 }
+.vehicle-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px var(--sp-4);
+  margin-top: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-card);
+  background: var(--inset);
+}
+.vspec {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  padding: 3px 0;
+  font-size: var(--fs-ui);
+}
+.vspec span {
+  color: var(--muted);
+  font-size: var(--fs-micro);
+}
+.vspec strong {
+  color: var(--text-body);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
 #vehicle-overlay[hidden] {
   display: none; /* the flex display below would otherwise defeat `hidden` */
 }

@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import type { VehicleSpec } from './data/vehicles';
 
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -35,8 +36,8 @@ function buildVehicle(spec: VehicleSpec): THREE.Group {
     }
   }
 
-  if (spec.fins) {
-    const { count, h, w, color } = spec.fins;
+  if (spec.strakes) {
+    const { count, h, w, color } = spec.strakes;
     const shape = new THREE.Shape();
     shape.moveTo(0, 0);
     shape.lineTo(w, 0);
@@ -52,6 +53,32 @@ function buildVehicle(spec: VehicleSpec): THREE.Group {
     }
   }
 
+  if (spec.gridFins) {
+    // deployed lattice fins at the interstage, Falcon-style
+    const { y: finY, size, color } = spec.gridFins;
+    const finMat = mat(color, 0.6, 0.5);
+    for (let i = 0; i < 4; i++) {
+      const a = (i / 4) * Math.PI * 2 + Math.PI / 4;
+      const fin = new THREE.Mesh(new THREE.BoxGeometry(size * 1.35, size * 0.1, size), finMat);
+      fin.position.set(Math.cos(a) * (coreR + size * 0.62), finY, Math.sin(a) * (coreR + size * 0.62));
+      fin.rotation.y = -a;
+      group.add(fin);
+    }
+  }
+
+  if (spec.legs) {
+    // stowed landing legs hugging the lower body
+    const { count, len, color } = spec.legs;
+    const legMat = mat(color, 0.4, 0.5);
+    for (let i = 0; i < count; i++) {
+      const a = (i / count) * Math.PI * 2 + Math.PI / count;
+      const leg = new THREE.Mesh(new THREE.BoxGeometry(coreR * 0.28, len, coreR * 0.14), legMat);
+      leg.position.set(Math.cos(a) * (coreR + coreR * 0.09), len / 2 + 0.5, Math.sin(a) * (coreR + coreR * 0.09));
+      leg.rotation.y = -a;
+      group.add(leg);
+    }
+  }
+
   if (spec.engines) {
     const { count, r } = spec.engines;
     const nozzleMat = new THREE.MeshStandardMaterial({ color: '#22262e', metalness: 0.8, roughness: 0.35 });
@@ -62,6 +89,14 @@ function buildVehicle(spec: VehicleSpec): THREE.Group {
       nozzle.position.set(Math.cos(a) * ring, -r * 0.55, Math.sin(a) * ring);
       group.add(nozzle);
     }
+    // soft accent glow ring under the engine section — the design language's dot, in 3D
+    const glow = new THREE.Mesh(
+      new THREE.TorusGeometry(coreR * 0.85, coreR * 0.05, 12, 48),
+      new THREE.MeshBasicMaterial({ color: spec.accent, transparent: true, opacity: 0.45 }),
+    );
+    glow.rotation.x = Math.PI / 2;
+    glow.position.y = -r * 1.6;
+    group.add(glow);
   }
 
   // normalize to a display height of ~3 units, centered vertically
@@ -77,6 +112,7 @@ export class VehicleViewer {
   private scene = new THREE.Scene();
   private camera: THREE.PerspectiveCamera;
   private vehicle: THREE.Group;
+  private pmrem!: THREE.PMREMGenerator;
   private raf = 0;
   private last = 0;
   private dragging = false;
@@ -94,12 +130,17 @@ export class VehicleViewer {
     this.camera.position.set(0, 0.35, 5.9);
     this.camera.lookAt(0, 0, 0);
 
-    this.scene.add(new THREE.AmbientLight('#8fa5c8', 0.55));
-    const key = new THREE.DirectionalLight('#ffffff', 1.7);
+    // image-based lighting makes metals and gloss read as materials
+    this.pmrem = new THREE.PMREMGenerator(this.renderer);
+    this.scene.environment = this.pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+    this.scene.environmentIntensity = 0.55;
+
+    this.scene.add(new THREE.AmbientLight('#8fa5c8', 0.25));
+    const key = new THREE.DirectionalLight('#ffffff', 1.5);
     key.position.set(2.5, 3, 2.2);
-    const rim = new THREE.DirectionalLight(spec.accent, 1.4);
+    const rim = new THREE.DirectionalLight(spec.accent, 1.5);
     rim.position.set(-3, 0.8, -2.6);
-    const fill = new THREE.DirectionalLight('#3a4a70', 0.5);
+    const fill = new THREE.DirectionalLight('#3a4a70', 0.4);
     fill.position.set(0, -2, 1);
     this.scene.add(key, rim, fill);
 
@@ -153,6 +194,7 @@ export class VehicleViewer {
         (Array.isArray(obj.material) ? obj.material : [obj.material]).forEach((m) => m.dispose());
       }
     });
+    this.pmrem.dispose();
     this.renderer.dispose();
   }
 }
