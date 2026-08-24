@@ -115,7 +115,7 @@ Sanctioned motion: camera flights (1.5s, `easeCubicInOut`, long hops dip out fir
 ## 7. Components
 
 - **Top bar**: gradient scrim from `--bg` to transparent; brand wordmark Sora 700 with a subtle blue-white gradient; search (glass 1, accent focus ring), country select, tour button (accent gradient fill), reset (glass, icon-only).
-- **Legend** (bottom-left, glass 1): micro-label title, rows of 10px category dots with soft glow; toggled-off rows drop to 35% opacity.
+- **Legend** (bottom-left, glass 1): eyebrow title ("CATEGORIES" with the neutral `--cat-mixed` dot — it indexes every category), rows of 10px category dots with soft glow; toggled-off rows drop to 35% opacity.
 - **Tooltip** (glass 1): entity name at `--fs-sub`, category dot row, muted hint line. Follows cursor, never intercepts it.
 - **Country stats card** (top-left, glass 2): country name at display size, muted total, categories as eyebrow group headers (category-colored uppercase micro-label with glowing dot, muted tabular count) over clickable entity rows (accent-soft hover).
 - **Profile panel** (right, glass 2, 420px): category eyebrow (uncontained uppercase micro-label with a glowing category-colored dot — same vocabulary as the section headings and legend) → name → meta row → website link → body paragraphs → micro-label sections (programs, milestones as an accent-ruled timeline with tabular years, achievements, connections as inset rows with dot + relation phrase, tags as a muted interpunct-separated line — no chrome, echoing the meta row so the panel opens and closes quietly). Bottom sheet ≤ 720px.

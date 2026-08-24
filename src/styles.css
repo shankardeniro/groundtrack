@@ -280,12 +280,16 @@ select {
   backdrop-filter: blur(var(--blur-1));
   max-width: 230px;
 }
+/* Eyebrow with the neutral mixed-category dot — the legend indexes them all. */
 .legend-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-size: var(--fs-micro);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--track-label);
-  color: var(--muted);
+  color: var(--chip, var(--muted));
   margin-bottom: var(--sp-2);
   padding: 0 var(--sp-1);
 }

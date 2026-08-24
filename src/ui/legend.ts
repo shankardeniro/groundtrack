@@ -8,7 +8,7 @@ export class Legend {
 
   constructor(private onChange: () => void) {
     this.el.innerHTML =
-      `<div class="legend-title">Categories</div>` +
+      `<div class="legend-title" style="--chip:var(--cat-mixed)"><span class="chip-dot"></span>Categories</div>` +
       (Object.keys(CATEGORIES) as Category[])
         .map(
           (cat) =>
