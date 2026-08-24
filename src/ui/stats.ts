@@ -33,7 +33,7 @@ export class Stats {
               .map(
                 ([cat, list]) => `
                   <div class="stats-group">
-                    <div class="stats-cat"><span class="legend-dot" style="background:${CATEGORIES[cat].color}"></span>${list.length === 1 ? CATEGORIES[cat].label : CATEGORIES[cat].plural} · ${list.length}</div>
+                    <div class="stats-cat" style="--chip:${CATEGORIES[cat].color}"><span class="chip-dot"></span>${list.length === 1 ? CATEGORIES[cat].label : CATEGORIES[cat].plural}<span class="stats-count">· ${list.length}</span></div>
                     ${list
                       .map((e) => `<button class="stats-entity" data-id="${e.id}">${e.name}<span class="result-sub">${e.city}</span></button>`)
                       .join('')}

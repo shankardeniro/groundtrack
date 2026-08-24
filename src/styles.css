@@ -516,16 +516,21 @@ select {
 .stats-group {
   margin-bottom: var(--sp-3);
 }
+/* Category eyebrow, same treatment as the panel chip. */
 .stats-cat {
   display: flex;
   align-items: center;
-  gap: var(--sp-2);
+  gap: 7px;
   font-size: var(--fs-micro);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
+  letter-spacing: var(--track-label);
+  color: var(--chip);
   margin-bottom: 5px;
+}
+.stats-count {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 .stats-entity {
   display: flex;
