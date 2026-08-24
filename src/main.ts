@@ -9,6 +9,7 @@ import { Legend } from './ui/legend';
 import { Search } from './ui/search';
 import { Stats } from './ui/stats';
 import { Chooser } from './ui/chooser';
+import { closeVehicleOverlay } from './vehicle3d';
 import { Tour } from './tour';
 
 // ────────────────────────── starfield backdrop ──────────────────────────
@@ -158,6 +159,7 @@ document.getElementById('reset-btn')!.addEventListener('click', () => {
 });
 document.addEventListener('keydown', (ev) => {
   if (ev.key === 'Escape') {
+    if (closeVehicleOverlay()) return;
     if (tour.running) tour.stop();
     else clearSelection();
   }

@@ -1,6 +1,8 @@
 import { CATEGORIES, RELATION_TEXT } from '../types';
 import type { SpaceEntity } from '../types';
 import { ENTITIES, ENTITY_BY_ID } from '../data/entities';
+import { VEHICLE_BY_ENTITY } from '../data/vehicles';
+import { VehicleViewer, openVehicleOverlay } from '../vehicle3d';
 
 export interface PanelCallbacks {
   onNavigate(e: SpaceEntity): void;
@@ -10,6 +12,7 @@ export interface PanelCallbacks {
 /** Slide-in profile panel (bottom sheet on mobile). */
 export class Panel {
   private el = document.getElementById('panel') as HTMLElement;
+  private viewer: VehicleViewer | null = null;
 
   constructor(private cb: PanelCallbacks) {}
 
@@ -20,6 +23,7 @@ export class Panel {
   show(e: SpaceEntity): void {
     const meta = CATEGORIES[e.category];
     const relations = this.relationsOf(e);
+    const vehicle = VEHICLE_BY_ENTITY.get(e.id);
 
     this.el.innerHTML = `
       <button class="panel-close" aria-label="Close profile">×</button>
@@ -32,6 +36,20 @@ export class Panel {
         </div>
         <a class="panel-link" href="${e.website}" target="_blank" rel="noopener">Visit website ↗</a>
         ${e.description.map((p) => `<p>${p}</p>`).join('')}
+
+        ${
+          vehicle
+            ? `<h3>Flagship vehicle</h3>
+               <div class="vehicle-box">
+                 <canvas class="vehicle-canvas" aria-label="Stylized 3D model of ${vehicle.name}"></canvas>
+                 <div class="vehicle-caption">
+                   <strong>${vehicle.name}</strong>
+                   <span>${vehicle.heightM} m · stylized · drag to rotate</span>
+                   <button class="vehicle-expand">Expand ⤢</button>
+                 </div>
+               </div>`
+            : ''
+        }
 
         <h3>Key programs & missions</h3>
         <ul class="programs">
@@ -79,9 +97,19 @@ export class Panel {
 
     this.el.hidden = false;
     this.el.querySelector('.panel-scroll')!.scrollTop = 0;
+
+    this.viewer?.destroy();
+    this.viewer = null;
+    if (vehicle) {
+      // create after unhiding so the canvas has real layout dimensions
+      this.viewer = new VehicleViewer(this.el.querySelector('.vehicle-canvas')!, vehicle);
+      this.el.querySelector('.vehicle-expand')!.addEventListener('click', () => openVehicleOverlay(vehicle));
+    }
   }
 
   hide(): void {
+    this.viewer?.destroy();
+    this.viewer = null;
     this.el.hidden = true;
   }
 

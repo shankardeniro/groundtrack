@@ -647,6 +647,89 @@ select {
   color: var(--muted);
 }
 
+/* ────────────── vehicle viewer ────────────── */
+.vehicle-box {
+  position: relative;
+  height: 230px;
+  border-radius: var(--r-card);
+  border: 1px solid var(--glass-border);
+  background: radial-gradient(ellipse at 50% 30%, rgba(30, 44, 78, 0.5), var(--inset) 70%);
+  overflow: hidden;
+}
+.vehicle-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+.vehicle-canvas:active {
+  cursor: grabbing;
+}
+.vehicle-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  font-size: var(--fs-micro);
+  color: var(--muted);
+  background: linear-gradient(transparent, rgba(6, 10, 20, 0.75));
+  pointer-events: none;
+}
+.vehicle-caption strong {
+  color: var(--text);
+  font-size: var(--fs-ui);
+}
+.vehicle-expand {
+  margin-left: auto;
+  pointer-events: auto;
+  padding: 4px 10px;
+  border-radius: var(--r-control);
+  border: 1px solid var(--glass-border);
+  background: rgba(10, 16, 32, 0.7);
+  color: var(--text);
+  font-size: var(--fs-micro);
+  cursor: pointer;
+  transition: border-color var(--t-fast) var(--ease);
+}
+.vehicle-expand:hover {
+  border-color: var(--accent);
+}
+#vehicle-overlay[hidden] {
+  display: none; /* the flex display below would otherwise defeat `hidden` */
+}
+#vehicle-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 8, 18, 0.72);
+  backdrop-filter: blur(6px);
+}
+.vehicle-stage {
+  position: relative;
+  width: min(76vmin, 640px);
+  height: min(86vmin, 720px);
+  background: var(--glass-2);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  animation: pop-in var(--t-base) var(--ease);
+}
+.vehicle-stage .vehicle-caption {
+  font-size: var(--fs-ui);
+}
+.vehicle-stage .vehicle-caption strong {
+  font-size: var(--fs-sub);
+}
+
 /* ────────────── cluster chooser ────────────── */
 #cluster-pop {
   position: fixed;

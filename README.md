@@ -28,7 +28,7 @@ Every push to `main` builds and deploys the site to [GitHub Pages](https://shank
 ## Using the app
 
 - **Drag to spin the globe**, scroll/pinch to zoom; the globe idles with a slow rotation until you interact. **Click a country** to fly to it and see its summary stats.
-- **Click a pin** to open the profile panel: description, key programs, milestone timeline, achievements, and clickable connections.
+- **Click a pin** to open the profile panel: description, key programs, milestone timeline, achievements, and clickable connections. Flagship launch vehicles (Falcon 9, Electron, New Glenn, Ariane 6, …) appear as **stylized 3D models** — drag to rotate, expand for a big view.
 - Selecting an organization draws **glowing great-circle arcs** to its related entities (suppliers, launch sites, investors, partners), clipped at the horizon. Hover an arc to read the relationship.
 - **Numbered circles are clusters** — click to zoom in and split them apart.
 - **Search** by name, city, country, or tag; **filter** by country; **toggle categories** in the legend.

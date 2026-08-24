@@ -137,6 +137,7 @@ Rule: **dot when category-scoped, dotless when structural.** The panel's section
 - **Profile panel** (right, glass 2, 420px): category eyebrow → name → meta row → website link → body paragraphs → dotless accent section headings (programs, milestones as an accent-ruled timeline with tabular years, achievements, connections as inset rows with dot + relation phrase, tags as a muted interpunct-separated line — no chrome, echoing the meta row so the panel opens and closes quietly). Bottom sheet ≤ 720px.
 - **Cluster chooser** (glass 2 popover at the click point): appears when a clicked cluster's members are too co-located for zooming to ever separate (e.g. KSC / Cape Canaveral) — eyebrow title over clickable entity rows.
 - **Tour card** (bottom-center, glass 2): "STOP n OF 10" eyebrow, stop name, caption, Back / Next (primary) / Exit controls.
+- **Vehicle viewer** (inline in the profile panel + expandable overlay): stylized procedural 3D launchers (three.js) built from declarative specs in `src/data/vehicles.ts` — recognizable silhouettes and liveries, deliberately not photorealistic, lit with a white key and a livery-accent rim over a radial-glow inset box. Slow idle spin (off under reduced motion), drag to rotate, Expand opens a large glass-stage overlay (Esc/backdrop closes). The caption always says "stylized depiction" — accuracy honesty is part of the design.
 
 ## 8. Accessibility
 
