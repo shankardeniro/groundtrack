@@ -663,6 +663,13 @@ select {
   cursor: grab;
   touch-action: none;
 }
+.vehicle-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
 .vehicle-canvas:active {
   cursor: grabbing;
 }
@@ -749,6 +756,10 @@ select {
   box-shadow: var(--shadow-card);
   overflow: hidden;
   animation: pop-in var(--t-base) var(--ease);
+}
+.vehicle-stage .vehicle-photo {
+  object-fit: contain; /* the overlay shows the whole photograph, uncropped */
+  background: #05080f;
 }
 .vehicle-stage .vehicle-caption {
   font-size: var(--fs-ui);

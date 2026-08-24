@@ -203,23 +203,37 @@ export class VehicleViewer {
 
 let overlayViewer: VehicleViewer | null = null;
 
-export function openVehicleOverlay(spec: VehicleSpec): void {
+function openOverlay(inner: string): HTMLElement {
   const el = document.getElementById('vehicle-overlay')!;
-  el.innerHTML = `
-    <div class="vehicle-stage">
+  el.innerHTML = `<div class="vehicle-stage">
       <button class="panel-close" aria-label="Close vehicle viewer">×</button>
-      <canvas class="vehicle-canvas" aria-label="Stylized 3D model of ${spec.name}"></canvas>
-      <div class="vehicle-caption">
-        <strong>${spec.name}</strong>
-        <span>${spec.heightM} m · stylized depiction · drag to rotate</span>
-      </div>
+      ${inner}
     </div>`;
   el.hidden = false;
   el.addEventListener('click', (ev) => {
     if (ev.target === el) closeVehicleOverlay();
   });
   el.querySelector('.panel-close')!.addEventListener('click', () => closeVehicleOverlay());
+  return el;
+}
+
+export function openVehicleOverlay(spec: VehicleSpec): void {
+  const el = openOverlay(`
+      <canvas class="vehicle-canvas" aria-label="Stylized 3D model of ${spec.name}"></canvas>
+      <div class="vehicle-caption">
+        <strong>${spec.name}</strong>
+        <span>${spec.heightM} m · stylized depiction · drag to rotate</span>
+      </div>`);
   overlayViewer = new VehicleViewer(el.querySelector('canvas')!, spec);
+}
+
+export function openPhotoOverlay(title: string, sub: string, src: string, alt: string): void {
+  openOverlay(`
+      <img class="vehicle-photo" src="${src}" alt="${alt}" />
+      <div class="vehicle-caption">
+        <strong>${title}</strong>
+        <span>${sub}</span>
+      </div>`);
 }
 
 /** Close the overlay if open; returns whether it was open. */
