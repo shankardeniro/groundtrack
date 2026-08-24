@@ -114,13 +114,29 @@ Sanctioned motion: camera flights (1.5s, `easeCubicInOut`, long hops dip out fir
 
 ## 7. Components
 
+### The eyebrow
+
+The shared heading component for anything category-scoped: an **uncontained uppercase micro-label** (`--fs-micro` / 600 / `--track-label`) led by a **7px glowing dot** (`.chip-dot`, `box-shadow: 0 0 6px`), both in a color set via the `--chip` custom property. One CSS implementation; five homes:
+
+| Surface | `--chip` color |
+| --- | --- |
+| Profile panel (category line) | The entity's category |
+| Stats card group headers | Each group's category (+ muted tabular count) |
+| Tour step counter | The current stop's category |
+| Cluster chooser title | The cluster's category; `--cat-mixed` when members span categories |
+| Legend title | `--cat-mixed` — it indexes every category |
+
+Rule: **dot when category-scoped, dotless when structural.** The panel's section headings ("MILESTONES", "CONNECTIONS") share the same type treatment but stay dotless in `--accent` — that distinction is what keeps the two heading roles readable.
+
+### Surfaces
+
 - **Top bar**: gradient scrim from `--bg` to transparent; brand wordmark Sora 700 with a subtle blue-white gradient; search (glass 1, accent focus ring), country select, tour button (accent gradient fill), reset (glass, icon-only).
-- **Legend** (bottom-left, glass 1): eyebrow title ("CATEGORIES" with the neutral `--cat-mixed` dot — it indexes every category), rows of 10px category dots with soft glow; toggled-off rows drop to 35% opacity.
+- **Legend** (bottom-left, glass 1): eyebrow title, then rows of 10px category dots with soft glow; toggled-off rows drop to 35% opacity.
 - **Tooltip** (glass 1): entity name at `--fs-sub`, category dot row, muted hint line. Follows cursor, never intercepts it.
-- **Country stats card** (top-left, glass 2): country name at display size, muted total, categories as eyebrow group headers (category-colored uppercase micro-label with glowing dot, muted tabular count) over clickable entity rows (accent-soft hover).
-- **Profile panel** (right, glass 2, 420px): category eyebrow (uncontained uppercase micro-label with a glowing category-colored dot — same vocabulary as the section headings and legend) → name → meta row → website link → body paragraphs → micro-label sections (programs, milestones as an accent-ruled timeline with tabular years, achievements, connections as inset rows with dot + relation phrase, tags as a muted interpunct-separated line — no chrome, echoing the meta row so the panel opens and closes quietly). Bottom sheet ≤ 720px.
-- **Cluster chooser** (glass 2 popover at the click point): appears when a clicked cluster's members are too co-located for zooming to ever separate (e.g. KSC / Cape Canaveral) — eyebrow header ("N ORGANIZATIONS HERE", dot + label in the cluster's category color, neutral `--cat-mixed` when mixed) over clickable entity rows.
-- **Tour card** (bottom-center, glass 2): "STOP n OF 10" eyebrow (dot + label in the current stop's category color), stop name, caption, Back / Next (primary) / Exit controls.
+- **Country stats card** (top-left, glass 2): country name at display size, muted total, eyebrow group headers over clickable entity rows (accent-soft hover).
+- **Profile panel** (right, glass 2, 420px): category eyebrow → name → meta row → website link → body paragraphs → dotless accent section headings (programs, milestones as an accent-ruled timeline with tabular years, achievements, connections as inset rows with dot + relation phrase, tags as a muted interpunct-separated line — no chrome, echoing the meta row so the panel opens and closes quietly). Bottom sheet ≤ 720px.
+- **Cluster chooser** (glass 2 popover at the click point): appears when a clicked cluster's members are too co-located for zooming to ever separate (e.g. KSC / Cape Canaveral) — eyebrow title over clickable entity rows.
+- **Tour card** (bottom-center, glass 2): "STOP n OF 10" eyebrow, stop name, caption, Back / Next (primary) / Exit controls.
 
 ## 8. Accessibility
 
