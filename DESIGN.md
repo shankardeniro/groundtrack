@@ -96,7 +96,7 @@ Rules: section headings inside panels are micro labels in `--accent`. Years and 
 
 ## 5. The scene (globe, pins, arcs)
 
-- **Pins**: 5.5px dot in category color, dark `#0a0f1c` stroke, soft glow filter, 16% halo. Selected: 8px, 35% halo with a pulse. Labels appear at zoom ≥ 3.5× (or when selected): 11.5px / 600 with a dark paint-order stroke for legibility.
+- **Pins**: 5.5px dot in category color, dark `#0a0f1c` stroke, soft glow filter, 16% halo, and an invisible ≥16px-radius hit circle so the true target is at least 32px wide. Selected: 8px, 35% halo with a pulse. Labels appear at zoom ≥ 3.5× (or when selected): 11.5px / 600 with a dark paint-order stroke for legibility — and they are click targets, not just captions.
 - **Clusters**: dark disc, category-colored (or neutral `#9fb4d8`) 2px ring and count.
 - **Arcs**: 1.6px great-circle strokes in the *other* endpoint's category color, drawn with a 1.1s dash animation, glow via drop-shadow.
 - **Atmosphere**: soft `--accent` radial glow ring at 8% beyond the limb.

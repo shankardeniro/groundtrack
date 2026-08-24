@@ -94,6 +94,9 @@ select {
 .pin {
   outline: none;
 }
+.pin-hit {
+  fill: transparent;
+}
 .pin:focus-visible .pin-dot {
   stroke: #fff;
   stroke-width: 2.5;
@@ -106,6 +109,7 @@ select {
   font-variant-numeric: tabular-nums;
   pointer-events: none;
 }
+/* Labels are click targets too — the name is a far bigger handle than the dot. */
 .pin-label {
   fill: var(--text);
   font-family: var(--font-ui);
@@ -114,7 +118,7 @@ select {
   paint-order: stroke;
   stroke: rgba(4, 8, 18, 0.85);
   stroke-width: 3px;
-  pointer-events: none;
+  cursor: pointer;
 }
 .pin-halo.pulse {
   animation: pulse 1.8s ease-out infinite;

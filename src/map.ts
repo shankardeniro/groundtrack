@@ -459,6 +459,7 @@ export class MapView {
       .data(clusters, (c) => (c.members.length === 1 ? c.members[0].id : `cl-${c.members.map((m) => m.id).join('.')}`))
       .join((enter) => {
         const g = enter.append('g').attr('class', 'pin');
+        g.append('circle').attr('class', 'pin-hit'); // generous invisible hit target
         g.append('circle').attr('class', 'pin-halo');
         g.append('circle').attr('class', 'pin-dot');
         g.append('text').attr('class', 'pin-count');
@@ -520,6 +521,7 @@ export class MapView {
           : '#9fb4d8';
       const r = single ? (isSelected ? 8 : 5.5) : Math.min(16, 9 + c.members.length);
 
+      g.select<SVGCircleElement>('.pin-hit').attr('r', Math.max(16, r + 8));
       g.select<SVGCircleElement>('.pin-halo')
         .attr('r', r + (single ? 5 : 4))
         .attr('fill', color)
