@@ -97,6 +97,15 @@ select {
 .pin-hit {
   fill: transparent;
 }
+.pin-halo {
+  transition: opacity var(--t-fast) var(--ease);
+}
+.pin:hover .pin-halo {
+  opacity: 0.4;
+}
+.pin:hover .pin-label {
+  fill: #ffffff;
+}
 .pin:focus-visible .pin-dot {
   stroke: #fff;
   stroke-width: 2.5;
@@ -119,6 +128,7 @@ select {
   stroke: rgba(4, 8, 18, 0.85);
   stroke-width: 3px;
   cursor: pointer;
+  transition: fill var(--t-fast) var(--ease);
 }
 .pin-halo.pulse {
   animation: pulse 1.8s ease-out infinite;
