@@ -181,4 +181,86 @@ export const MORE_INVESTORS: SpaceEntity[] = [
     website: 'https://starburst.aero',
     related: [],
   },
+  {
+    id: 'alpine-space-ventures',
+    name: 'Alpine Space Ventures',
+    category: 'investor',
+    country: 'Germany',
+    city: 'Munich',
+    coords: [11.582, 48.1351],
+    founded: 2020,
+    description: [
+      'Alpine Space Ventures is a Munich venture firm founded by Bulent Altan — one of SpaceX’s earliest engineers — and investor Joram Voelklein, built on the conviction that Europe’s engineering heartland can produce world-class space companies. The firm invests where deep aerospace operating experience matters most.',
+      'In 2024 it closed its first fund at around €170 million, backed by the European Investment Fund among others, one of the largest funds ever raised in Europe dedicated to space. Its focus is space hardware — the satellites, components, and infrastructure underpinning the orbital economy.',
+    ],
+    programs: [
+      { name: 'Alpine Space Ventures Fund I', blurb: '€170M fund backing European space hardware startups.' },
+    ],
+    milestones: [
+      { year: 2020, text: 'Founded in Munich by SpaceX veteran Bulent Altan and Joram Voelklein.' },
+      { year: 2024, text: 'Closes its first fund at roughly €170 million with EIF backing.' },
+    ],
+    achievements: [
+      'Raised one of Europe’s largest dedicated space funds',
+      'Founded by one of SpaceX’s earliest engineering leaders',
+    ],
+    tags: ['venture capital', 'space hardware', 'europe', 'early stage'],
+    website: 'https://www.alpinespace.vc',
+    related: [],
+  },
+  {
+    id: 'primo-space',
+    name: 'Primo Space Fund',
+    category: 'investor',
+    country: 'Italy',
+    city: 'Milan',
+    coords: [9.19, 45.4642],
+    founded: 2020,
+    description: [
+      'Primo Space Fund, managed by Milan-based Primo Ventures, is Italy’s first venture fund dedicated entirely to the space economy. Backed by the European Investment Fund and Italy’s CDP, it gave the country — home to a deep aerospace industrial heritage — a dedicated pool of early-stage space capital.',
+      'The fund invests across Europe in in-orbit services, Earth observation, and space infrastructure, backing founders commercializing technologies that often trace their roots to Italy’s strong space research base.',
+    ],
+    programs: [
+      { name: 'Primo Space Fund', blurb: 'EIF- and CDP-backed fund investing in early-stage European space startups.' },
+    ],
+    milestones: [
+      { year: 2020, text: 'Launches as Italy’s first space-dedicated venture fund.' },
+      { year: 2021, text: 'Reaches final close and builds a portfolio across the European space economy.' },
+    ],
+    achievements: [
+      'Italy’s first venture fund dedicated to space',
+      'Backed by the European Investment Fund and CDP',
+    ],
+    tags: ['venture capital', 'space economy', 'italy', 'early stage'],
+    website: 'https://primo.vc',
+    related: [],
+  },
+  {
+    id: 'spacefund',
+    name: 'SpaceFund',
+    category: 'investor',
+    country: 'United States',
+    mapName: 'United States of America',
+    city: 'Houston',
+    coords: [-95.3698, 29.7604],
+    founded: 2019,
+    description: [
+      'SpaceFund is a Houston venture firm founded by Rick Tumlinson — a longtime evangelist of space settlement and commercialization — and managing partner Meagan Crawford. The firm invests early in startups building the transportation, infrastructure, and services of the orbital economy.',
+      'Beyond writing checks, SpaceFund became known for its public ‘reality ratings’ — free databases scoring launch companies and other space ventures on how real their technology and business actually are, bringing a dose of transparency to a hype-prone industry.',
+    ],
+    programs: [
+      { name: 'SpaceFund venture funds', blurb: 'Early-stage funds investing in space transportation, infrastructure, and services.' },
+    ],
+    milestones: [
+      { year: 2019, text: 'Founded in Houston by Rick Tumlinson and Meagan Crawford.' },
+      { year: 2019, text: 'Publishes its first public ‘reality ratings’ of launch companies.' },
+    ],
+    achievements: [
+      'Created the public ‘reality ratings’ databases of space companies',
+      'Founded by pioneers of the space commercialization movement',
+    ],
+    tags: ['venture capital', 'space economy', 'early stage', 'houston'],
+    website: 'https://spacefund.com',
+    related: [],
+  },
 ];

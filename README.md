@@ -40,7 +40,7 @@ Every push to `main` builds and deploys the site to [GitHub Pages](https://shank
 | Path | Role |
 | --- | --- |
 | `DESIGN.md` + `src/styles/tokens.css` | **The design system** — visual identity, tokens (color, type, spacing, shape, motion), and component specs. Change look-and-feel by editing tokens, guided by DESIGN.md. |
-| `src/data/` | **The dataset** (~150 curated entities). `entities.ts` holds the founding set and aggregates the per-category files (`agencies.ts`, `startups.ts`, `manufacturers.ts`, `rnd.ts`, `launch-sites.ts`, `ground-stations.ts`, `investors.ts`) — add new entries to the file for their category. |
+| `src/data/` | **The dataset** (215 curated entities). `entities.ts` holds the founding set and aggregates the per-category files (`agencies.ts`, `startups.ts`, `manufacturers.ts`, `rnd.ts`, `launch-sites.ts`, `ground-stations.ts`, `investors.ts`) — add new entries to the file for their category. |
 | `scripts/validate-data.mjs` | Dataset linter: unique ids, resolvable relations, valid coords, and country names that exist in the map geometry. Run `node scripts/validate-data.mjs` after editing data. |
 | `src/types.ts` | Schema (`SpaceEntity`), category colors, relationship phrasing. |
 | `src/map.ts` | `MapView`: orthographic globe (drag-rotate, wheel/pinch zoom, animated camera flights), dual-resolution country layers (110m while moving, 50m at rest), pin clustering with far-side culling, great-circle arcs, touch-tap handling. |
@@ -85,4 +85,4 @@ To add a **tour stop**, add `{ id, caption }` to `STOPS` in `src/tour.ts`.
 
 ## Data notes
 
-The dataset is hand-curated with real facts, coordinates, and dates (accurate to mid-2025). At ~150 entities across ~40 countries it is a representative map of the global space ecosystem, not an exhaustive census — every entry aims for accuracy over completeness, and phrasing stays conservative where exact figures move quickly (funding rounds, launch counts).
+The dataset is hand-curated with real facts, coordinates, and dates (accurate to mid-2025). At 215 entities across 49 countries (Antarctica included) it is a representative map of the global space ecosystem, not an exhaustive census — every entry aims for accuracy over completeness, and phrasing stays conservative where exact figures move quickly (funding rounds, launch counts).
