@@ -222,12 +222,12 @@ select {
   top: calc(100% + 6px);
   left: 0;
   right: 0;
-  background: var(--glass-2);
-  border: 1px solid var(--glass-border-strong);
+  background: var(--glass-clear);
+  border: 1px solid var(--glass-clear-border);
   border-radius: var(--r-card);
   overflow: hidden;
-  backdrop-filter: blur(var(--blur-2));
-  box-shadow: var(--shadow-card);
+  backdrop-filter: var(--backdrop-clear);
+  box-shadow: var(--shadow-card), var(--glass-clear-highlight);
 }
 .result {
   display: flex;
