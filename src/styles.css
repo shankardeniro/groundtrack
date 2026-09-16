@@ -266,8 +266,12 @@ select {
 #reset-btn {
   padding: 9px 14px;
   border-radius: var(--r-control);
-  border: 1px solid var(--glass-border);
-  background: linear-gradient(135deg, rgba(90, 162, 255, 0.2), rgba(192, 132, 252, 0.15));
+  border: 1px solid var(--glass-clear-border);
+  background:
+    linear-gradient(135deg, rgba(90, 162, 255, 0.2), rgba(192, 132, 252, 0.15)),
+    var(--glass-clear);
+  box-shadow: var(--glass-clear-highlight);
+  backdrop-filter: var(--backdrop-clear);
   color: var(--text);
   font-size: var(--fs-ui);
   font-weight: 600;
@@ -280,7 +284,7 @@ select {
   transform: translateY(-1px);
 }
 #reset-btn {
-  background: var(--glass-1);
+  background: var(--glass-clear);
   font-size: 15px;
   line-height: 1;
 }
