@@ -81,11 +81,11 @@ export const MORE_LAUNCH_SITES: SpaceEntity[] = [
     founded: 1945,
     description: [
       'Wallops Island, on Virginia’s Atlantic shore, is one of the oldest launch ranges in the world — NACA began firing research rockets from here in 1945, before NASA even existed. Thousands of sounding rockets and balloons have flown from its beaches since.',
-      'The co-located Mid-Atlantic Regional Spaceport (MARS) brought orbital flight to the island: Antares rockets have lofted Cygnus cargo ships to the ISS from Pad 0A, and Rocket Lab launches Electron from its Launch Complex 2, with pads planned for the larger Neutron.',
+      'The co-located Mid-Atlantic Regional Spaceport (MARS) brought orbital flight to the island: Antares rockets have lofted Cygnus cargo ships to the ISS from Pad 0A, and Rocket Lab launches Electron from its Launch Complex 2, with Launch Complex 3 now built for the larger Neutron.',
     ],
     programs: [
       { name: 'Antares / Cygnus', blurb: 'ISS cargo resupply missions launched from MARS Pad 0A since 2013.' },
-      { name: 'Rocket Lab LC-2', blurb: 'Electron’s US launch site, with Neutron infrastructure in development.' },
+      { name: 'Rocket Lab LC-2', blurb: 'Electron’s US launch site, with Launch Complex 3 complete for Neutron’s debut.' },
       { name: 'Sounding rockets', blurb: 'NASA’s suborbital research program, flying from Wallops for decades.' },
     ],
     milestones: [
@@ -242,6 +242,7 @@ export const MORE_LAUNCH_SITES: SpaceEntity[] = [
       { year: 2020, text: 'Chang’e 5 departs to return the first lunar samples since 1976; Tianwen-1 heads to Mars.' },
       { year: 2021, text: 'Tianhe, the Tiangong station’s core module, launches.' },
       { year: 2024, text: 'Chang’e 6 sets off to collect the first far-side lunar samples.' },
+      { year: 2024, text: 'The adjacent Hainan commercial launch site debuts with the maiden Long March 12 flight.' },
     ],
     achievements: [
       'Launch site of every Tiangong station module',
@@ -301,6 +302,7 @@ export const MORE_LAUNCH_SITES: SpaceEntity[] = [
       { year: 2009, text: 'Space centre opens at Goheung.' },
       { year: 2013, text: 'Naro-1 reaches orbit on its third attempt.' },
       { year: 2022, text: 'Nuri delivers satellites to orbit — a fully Korean launch.' },
+      { year: 2025, text: 'Nuri’s fourth flight succeeds, the first led by Hanwha Aerospace and private industry.' },
     ],
     achievements: [
       'South Korea’s first and only orbital spaceport',
@@ -349,7 +351,7 @@ export const MORE_LAUNCH_SITES: SpaceEntity[] = [
     founded: 2023,
     description: [
       'On a mountainous Arctic island in northern Norway, Andøya has launched sounding rockets since 1962 — including the 1995 flight that famously triggered a Russian nuclear alert. Its new orbital spaceport at Nordmela opened in 2023 with a clear shot over the Norwegian Sea to polar orbit.',
-      'In March 2025 Andøya hosted the first orbital launch attempt from continental Europe, when Isar Aerospace’s Spectrum rocket lifted off from its pad. The island aims to become a key European gateway for commercial small-satellite launches.',
+      'In March 2025 Andøya hosted the first orbital launch attempt from continental Europe, when Isar Aerospace’s Spectrum rocket lifted off from its pad — and on its second flight, in September 2026, Spectrum reached orbit and deployed its first payloads. The island aims to become a key European gateway for commercial small-satellite launches.',
     ],
     programs: [
       { name: 'Orbital launch complex', blurb: 'Pads at Nordmela leased to commercial launchers such as Isar Aerospace.' },
@@ -359,9 +361,10 @@ export const MORE_LAUNCH_SITES: SpaceEntity[] = [
       { year: 1962, text: 'First sounding rocket launched from Andøya.' },
       { year: 2023, text: 'Orbital spaceport officially opened.' },
       { year: 2025, text: 'Isar Aerospace’s Spectrum makes the first orbital launch attempt from continental Europe.' },
+      { year: 2026, text: 'Spectrum’s second flight reaches orbit — the first orbital launch from continental Europe.' },
     ],
     achievements: [
-      'Hosted the first orbital launch attempt from continental Europe',
+      'Hosted the first orbital launch from continental Europe',
       'Six decades of Arctic sounding-rocket heritage',
     ],
     tags: ['spaceport', 'arctic', 'norway', 'commercial launch'],
@@ -388,6 +391,7 @@ export const MORE_LAUNCH_SITES: SpaceEntity[] = [
       { year: 2021, text: 'Spaceport development begins at the former RAF Saxa Vord site.' },
       { year: 2023, text: 'Receives the UK’s first vertical-launch spaceport licence.' },
       { year: 2024, text: 'First-stage engine tests conducted on the pad by Rocket Factory Augsburg.' },
+      { year: 2026, text: 'RFA delivers its RFA ONE flight stages to the pad ahead of the UK’s first vertical orbital launch attempt.' },
     ],
     achievements: [
       'The UK’s first licensed vertical-launch spaceport',
@@ -555,7 +559,7 @@ export const MORE_LAUNCH_SITES: SpaceEntity[] = [
     founded: 2024,
     description: [
       'On the southern tip of India, ISRO is building its second spaceport at Kulasekarapattinam in coastal Tamil Nadu. The site is dedicated to small launchers like the SSLV, giving India extra capacity as commercial demand for small-satellite rides grows.',
-      'Its location is the key advantage: rockets can fly straight south over the Indian Ocean into polar orbit, avoiding the fuel-costing dogleg around Sri Lanka required from Sriharikota. The foundation stone was laid in 2024, with construction under way.',
+      'Its location is the key advantage: rockets can fly straight south over the Indian Ocean into polar orbit, avoiding the fuel-costing dogleg around Sri Lanka required from Sriharikota. The foundation stone was laid in 2024, and construction is under way toward commissioning in 2026–27.',
     ],
     programs: [
       { name: 'SSLV launches', blurb: 'A dedicated pad for ISRO’s Small Satellite Launch Vehicle and commercial small launchers.' },

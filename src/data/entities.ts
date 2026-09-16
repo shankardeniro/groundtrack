@@ -32,7 +32,7 @@ const CORE: SpaceEntity[] = [
       'Today NASA pursues a return to the Moon through the Artemis program, operates a fleet of deep-space probes and space telescopes, and increasingly partners with commercial companies for crew, cargo, and lunar landers — reshaping how government space programs work.',
     ],
     programs: [
-      { name: 'Artemis', blurb: 'Crewed return to the Moon; Artemis I flew an uncrewed Orion around the Moon in 2022.' },
+      { name: 'Artemis', blurb: 'Crewed return to the Moon; Artemis II carried four astronauts around the Moon in 2026.' },
       { name: 'Mars Exploration', blurb: 'Rovers from Sojourner (1997) to Perseverance (2021), plus the Ingenuity helicopter.' },
       { name: 'James Webb Space Telescope', blurb: 'Flagship infrared observatory launched in 2021, run with ESA and CSA.' },
     ],
@@ -42,6 +42,7 @@ const CORE: SpaceEntity[] = [
       { year: 1981, text: 'First Space Shuttle flight, STS-1.' },
       { year: 1998, text: 'First ISS module launched; assembly begins.' },
       { year: 2021, text: 'Perseverance lands on Mars; JWST launches.' },
+      { year: 2026, text: 'Artemis II flies four astronauts around the Moon — the first crewed lunar mission since Apollo.' },
     ],
     achievements: [
       'Only organization to have landed humans on another world',
@@ -147,13 +148,14 @@ const CORE: SpaceEntity[] = [
     programs: [
       { name: 'Tiangong', blurb: 'Three-module crewed space station, permanently occupied since 2022.' },
       { name: 'Chang’e', blurb: 'Lunar exploration; far-side landing (2019) and far-side sample return (2024).' },
-      { name: 'Tianwen', blurb: 'Planetary exploration; Tianwen-1 landed the Zhurong rover on Mars in 2021.' },
+      { name: 'Tianwen', blurb: 'Planetary exploration; Tianwen-1 landed the Zhurong rover on Mars in 2021; Tianwen-2 departed for an asteroid in 2025.' },
     ],
     milestones: [
       { year: 2003, text: 'Yang Liwei becomes China’s first astronaut (Shenzhou 5).' },
       { year: 2019, text: 'Chang’e 4 makes the first-ever far-side lunar landing.' },
       { year: 2021, text: 'Zhurong rover lands on Mars; Tiangong assembly begins.' },
       { year: 2024, text: 'Chang’e 6 returns the first far-side lunar samples.' },
+      { year: 2025, text: 'Tianwen-2 launches to return samples from a near-Earth asteroid.' },
     ],
     achievements: [
       'Only nation to land on the lunar far side',
@@ -174,7 +176,7 @@ const CORE: SpaceEntity[] = [
     founded: 2003,
     description: [
       'The Japan Aerospace Exploration Agency is Japan’s national space agency, formed in 2003 from the merger of three institutions. JAXA is the world leader in asteroid sample return: Hayabusa and Hayabusa2 both brought asteroid material back to Earth.',
-      'JAXA operates the H3 launch vehicle, supplies the ISS through the HTV cargo series, and in 2024 its SLIM lander achieved a pinpoint lunar landing within 100 metres of its target — a precision first.',
+      'JAXA operates the H3 launch vehicle, supplies the ISS through the HTV cargo series and its HTV-X successor, and in 2024 its SLIM lander achieved a pinpoint lunar landing within 100 metres of its target — a precision first.',
     ],
     programs: [
       { name: 'Hayabusa2', blurb: 'Returned samples from asteroid Ryugu in 2020; extended mission ongoing.' },
@@ -186,6 +188,7 @@ const CORE: SpaceEntity[] = [
       { year: 2010, text: 'Hayabusa returns the first asteroid samples in history.' },
       { year: 2020, text: 'Hayabusa2 delivers pristine samples from asteroid Ryugu.' },
       { year: 2024, text: 'SLIM achieves a pinpoint Moon landing; H3 flies successfully.' },
+      { year: 2025, text: 'HTV-X1, Japan’s upgraded cargo ship, berths at the ISS.' },
     ],
     achievements: [
       'First (and second) asteroid sample return missions',
@@ -268,7 +271,7 @@ const CORE: SpaceEntity[] = [
     coords: [127.3845, 36.3504],
     founded: 1989,
     description: [
-      'The Korea Aerospace Research Institute is South Korea’s space agency and launcher developer. Its home-grown Nuri (KSLV-II) rocket reached orbit in 2022, making South Korea the seventh country to launch a 1-tonne-class satellite on its own vehicle.',
+      'The Korea Aerospace Research Institute is South Korea’s national aerospace research institute and launcher developer, working under the Korea AeroSpace Administration (KASA), the space agency established in 2024. Its home-grown Nuri (KSLV-II) rocket reached orbit in 2022, making South Korea the seventh country to launch a 1-tonne-class satellite on its own vehicle.',
       'KARI’s Danuri lunar orbiter, launched in 2022, carries NASA’s ShadowCam instrument peering into permanently shadowed lunar craters — a key input for Artemis landing-site selection.',
     ],
     programs: [
@@ -278,6 +281,8 @@ const CORE: SpaceEntity[] = [
     milestones: [
       { year: 1992, text: 'First Korean satellite, KITSAT-1.' },
       { year: 2022, text: 'Nuri reaches orbit; Danuri launches to the Moon.' },
+      { year: 2024, text: 'KASA established as Korea’s space agency, with KARI as its research arm.' },
+      { year: 2025, text: 'Nuri’s fourth flight delivers 13 satellites to orbit.' },
     ],
     achievements: ['Seventh nation with an indigenous 1-tonne-class orbital launcher', 'First Korean lunar mission'],
     tags: ['launchers', 'Moon', 'satellites'],
@@ -328,7 +333,7 @@ const CORE: SpaceEntity[] = [
       'The company operates Starlink, the largest satellite constellation ever built, and is developing Starship — the largest and most powerful rocket ever flown — as a fully reusable vehicle for Mars settlement and NASA’s Artemis lunar landings.',
     ],
     programs: [
-      { name: 'Falcon 9 / Falcon Heavy', blurb: 'Partially reusable workhorse launchers; 400+ flights and 350+ booster landings.' },
+      { name: 'Falcon 9 / Falcon Heavy', blurb: 'Partially reusable workhorse launchers; 600+ flights and 500+ booster landings.' },
       { name: 'Dragon', blurb: 'Crew and cargo capsule serving the ISS since 2012 (crew since 2020).' },
       { name: 'Starship', blurb: 'Fully reusable super-heavy launcher in flight test; Artemis lunar lander variant.' },
       { name: 'Starlink', blurb: 'Broadband mega-constellation with thousands of satellites in orbit.' },
@@ -362,7 +367,7 @@ const CORE: SpaceEntity[] = [
       'Rocket Lab has grown into an end-to-end space company: it builds spacecraft (including the Photon platform that sent NASA’s CAPSTONE to the Moon) and is developing the reusable medium-lift Neutron rocket.',
     ],
     programs: [
-      { name: 'Electron', blurb: 'Small-sat launcher with 50+ flights; first-stage recovery in development.' },
+      { name: 'Electron', blurb: 'Small-sat launcher with 80+ flights — the world’s busiest dedicated small-lift rocket.' },
       { name: 'Neutron', blurb: 'Reusable medium-lift launcher in development.' },
       { name: 'Photon / spacecraft', blurb: 'Satellite platforms; powered NASA’s CAPSTONE lunar mission in 2022.' },
     ],
@@ -390,7 +395,7 @@ const CORE: SpaceEntity[] = [
     coords: [-122.2348, 47.3809],
     founded: 2000,
     description: [
-      'Founded by Jeff Bezos with the motto "Gradatim Ferociter" (step by step, ferociously), Blue Origin builds reusable rockets and engines. Its suborbital New Shepard has carried dozens of space tourists past the Kármán line, and its orbital-class New Glenn rocket reached orbit on its first flight in January 2025.',
+      'Founded by Jeff Bezos with the motto "Gradatim Ferociter" (step by step, ferociously), Blue Origin builds reusable rockets and engines. Its suborbital New Shepard has carried dozens of space tourists past the Kármán line, and its orbital-class New Glenn rocket reached orbit on its first flight in January 2025 — then landed its booster at sea on its second flight that November.',
       'Blue Origin’s BE-4 engines also power United Launch Alliance’s Vulcan rocket, and NASA selected the company’s Blue Moon lander for the Artemis V crewed lunar landing.',
     ],
     programs: [
@@ -402,6 +407,7 @@ const CORE: SpaceEntity[] = [
       { year: 2015, text: 'New Shepard makes the first vertical landing of a rocket from space.' },
       { year: 2021, text: 'First crewed New Shepard flight, with Jeff Bezos aboard.' },
       { year: 2025, text: 'New Glenn reaches orbit on its maiden flight.' },
+      { year: 2025, text: 'Second New Glenn flight lands its booster and sends NASA’s ESCAPADE probes toward Mars.' },
     ],
     achievements: ['First vertical rocket landing from space', 'BE-4 engines power two heavy-lift rocket families'],
     tags: ['reusability', 'engines', 'lunar lander', 'space tourism'],
@@ -418,17 +424,18 @@ const CORE: SpaceEntity[] = [
     founded: 2018,
     description: [
       'Skyroot Aerospace, founded by former ISRO engineers, became the first Indian private company to launch a rocket into space when its Vikram-S suborbital vehicle flew from Sriharikota in November 2022 — a watershed moment for India’s newly liberalized private space sector.',
-      'The company is developing the orbital Vikram series of small launchers, featuring 3D-printed engines and carbon-composite structures, aiming to serve the fast-growing small-satellite market from Indian soil.',
+      'In July 2026 its orbital Vikram-1 — featuring 3D-printed engines and carbon-composite structures — reached orbit on its first flight, making Skyroot the first Indian company to achieve a private orbital launch and opening the fast-growing small-satellite market from Indian soil.',
     ],
     programs: [
       { name: 'Vikram-S', blurb: 'Suborbital demonstrator, first private Indian rocket in space (Mission Prarambh).' },
-      { name: 'Vikram-1', blurb: 'Orbital small-sat launcher in development.' },
+      { name: 'Vikram-1', blurb: 'Orbital small-sat launcher; reached orbit on its first flight in 2026.' },
     ],
     milestones: [
       { year: 2020, text: 'First Indian startup to test a homegrown upper-stage engine.' },
       { year: 2022, text: 'Vikram-S launches — India’s first private rocket in space.' },
+      { year: 2026, text: 'Vikram-1 reaches orbit — India’s first private orbital launch.' },
     ],
-    achievements: ['First private Indian rocket launch', 'One of India’s best-funded space startups'],
+    achievements: ['First private Indian rocket launch', 'India’s first private orbital launch', 'One of India’s best-funded space startups'],
     tags: ['small launch', 'India', 'private space', '3D printing'],
     website: 'https://skyroot.in',
     related: [{ id: 'sriharikota', type: 'launches-from' }],
@@ -775,13 +782,14 @@ const CORE: SpaceEntity[] = [
     ],
     programs: [
       { name: 'LC-39A/B', blurb: 'Apollo and Shuttle pads, now hosting SpaceX and Artemis launches.' },
-      { name: 'Artemis launches', blurb: 'SLS launched Artemis I from KSC in November 2022.' },
+      { name: 'Artemis launches', blurb: 'SLS launched Artemis I (2022) and the crewed Artemis II (2026) from Pad 39B.' },
     ],
     milestones: [
       { year: 1962, text: 'NASA acquires Merritt Island for the Moon program.' },
       { year: 1969, text: 'Apollo 11 lifts off from Pad 39A.' },
       { year: 2011, text: 'Final Shuttle flight; pads later leased commercially.' },
       { year: 2022, text: 'Artemis I launches the SLS on its maiden flight.' },
+      { year: 2026, text: 'Artemis II lifts off — the first crewed lunar mission to depart KSC since Apollo.' },
     ],
     achievements: ['Launch site of every crewed Moon mission', 'Busiest orbital spaceport on Earth (with adjacent Cape Canaveral SFS)'],
     tags: ['spaceport', 'Apollo', 'Artemis', 'Florida'],
@@ -850,7 +858,7 @@ const CORE: SpaceEntity[] = [
     founded: 1971,
     description: [
       'India’s spaceport occupies a barrier island on the Bay of Bengal coast, north of Chennai. Every Indian orbital mission — from the first SLV-3 to Chandrayaan-3 and Aditya-L1 — has launched from Sriharikota.',
-      'The centre now also hosts India’s private space revolution: Skyroot’s Vikram-S flew from here in 2022, and Agnikul built its own private launchpad on the island — India’s first.',
+      'The centre now also hosts India’s private space revolution: Skyroot’s Vikram-S flew from here in 2022, Agnikul built its own private launchpad on the island — India’s first — and Skyroot’s Vikram-1 reached orbit from here in 2026.',
     ],
     programs: [
       { name: 'First & Second Launch Pads', blurb: 'PSLV, GSLV, and LVM3 missions, including Chandrayaan and Gaganyaan.' },
@@ -860,6 +868,7 @@ const CORE: SpaceEntity[] = [
       { year: 1980, text: 'SLV-3 makes India a spacefaring nation.' },
       { year: 2022, text: 'First private Indian launch (Vikram-S).' },
       { year: 2023, text: 'Chandrayaan-3 departs for the Moon.' },
+      { year: 2026, text: 'Vikram-1 makes India’s first private orbital launch from the island.' },
     ],
     achievements: ['Launch site of every Indian orbital mission', 'Home of India’s first private launchpad'],
     tags: ['spaceport', 'India', 'PSLV', 'private launch'],

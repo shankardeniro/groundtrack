@@ -85,4 +85,4 @@ To add a **tour stop**, add `{ id, caption }` to `STOPS` in `src/tour.ts`.
 
 ## Data notes
 
-The dataset is hand-curated with real facts, coordinates, and dates (accurate to mid-2025). At 215 entities across 49 countries (Antarctica included) it is a representative map of the global space ecosystem, not an exhaustive census — every entry aims for accuracy over completeness, and phrasing stays conservative where exact figures move quickly (funding rounds, launch counts).
+The dataset is hand-curated with real facts, coordinates, and dates (accurate to September 2026). At 215 entities across 49 countries (Antarctica included) it is a representative map of the global space ecosystem, not an exhaustive census — every entry aims for accuracy over completeness, and phrasing stays conservative where exact figures move quickly (funding rounds, launch counts).

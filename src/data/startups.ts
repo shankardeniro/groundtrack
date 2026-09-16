@@ -30,6 +30,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
       { year: 2022, text: 'Alpha reaches orbit on its second flight.' },
       { year: 2023, text: 'Flies the VICTUS NOX responsive-space mission for the US Space Force on 24-hour notice.' },
       { year: 2025, text: 'Blue Ghost Mission 1 achieves a fully successful commercial lunar landing.' },
+      { year: 2025, text: 'Lists on Nasdaq in one of the largest space IPOs in years.' },
     ],
     achievements: [
       'First fully successful commercial soft landing on the Moon',
@@ -402,7 +403,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     founded: 2018,
     description: [
       'Isar Aerospace, a spin-off from the Technical University of Munich, is Europe’s best-funded launch startup. Its two-stage Spectrum rocket is designed to carry roughly a tonne to low Earth orbit, with engines and structures built in-house in Bavaria.',
-      'In March 2025 Spectrum lifted off from Andøya in Norway — the first orbital launch attempt from continental Europe. The vehicle was lost seconds into flight, but the attempt marked a milestone for European commercial launch and the company pressed on toward flight two.',
+      'In March 2025 Spectrum lifted off from Andøya in Norway — the first orbital launch attempt from continental Europe. The vehicle was lost seconds into flight, but in September 2026 the second Spectrum reached orbit and deployed its payloads, making Isar the first company to launch to orbit from continental European soil.',
     ],
     programs: [
       { name: 'Spectrum', blurb: 'Two-stage small launcher (~1 tonne to LEO) built in Bavaria.' },
@@ -412,9 +413,10 @@ export const MORE_STARTUPS: SpaceEntity[] = [
       { year: 2018, text: 'Founded by TU Munich graduates.' },
       { year: 2023, text: 'Becomes the best-funded launch startup in Europe.' },
       { year: 2025, text: 'Spectrum makes the first orbital launch attempt from continental Europe at Andøya.' },
+      { year: 2026, text: 'Spectrum reaches orbit on its second flight — the first orbital launch from continental Europe.' },
     ],
     achievements: [
-      'First orbital launch attempt from continental European soil',
+      'First rocket to reach orbit from continental European soil',
       'Raised more private launch funding than any other European startup',
     ],
     tags: ['launchers', 'newspace', 'europe', 'propulsion'],
@@ -519,8 +521,8 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     coords: [-3.6119, 57.6086],
     founded: 2015,
     description: [
-      'Orbex is a Scottish launch company based in Forres, developing the Prime micro-launcher for small satellites. Prime is fueled by bio-propane, which the company says significantly cuts launch carbon emissions, and features a largely 3D-printed engine.',
-      'Orbex originally led development of Sutherland Spaceport in the Scottish Highlands before shifting its first launches to the SaxaVord spaceport in Shetland, aiming to be among the first vertical orbital launches from UK soil.',
+      'Orbex is a Scottish launch company based in Forres that developed the Prime micro-launcher for small satellites. Prime is fueled by bio-propane, which the company said significantly cuts launch carbon emissions, and features a largely 3D-printed engine.',
+      'Orbex originally led development of Sutherland Spaceport in the Scottish Highlands before shifting its first launches to the SaxaVord spaceport in Shetland, aiming to be among the first vertical orbital launches from UK soil. Prime never flew: after a failed funding round, the company entered administration in early 2026.',
     ],
     programs: [
       { name: 'Prime', blurb: 'Micro-launcher for small satellites, fueled by bio-propane.' },
@@ -530,10 +532,11 @@ export const MORE_STARTUPS: SpaceEntity[] = [
       { year: 2015, text: 'Founded in Forres, Scotland.' },
       { year: 2022, text: 'Unveils the first full Prime prototype on its launch stool.' },
       { year: 2024, text: 'Switches its initial launch campaign to SaxaVord in Shetland.' },
+      { year: 2026, text: 'Enters administration after failing to raise new funding, with Prime still unflown.' },
     ],
     achievements: [
       'Pioneer of low-carbon bio-propane rocket fuel',
-      'One of the leading contenders for the UK’s first vertical orbital launch',
+      'Long among the leading contenders for the UK’s first vertical orbital launch',
     ],
     tags: ['launchers', 'newspace', 'sustainability', 'uk'],
     website: 'https://orbex.space',
@@ -607,19 +610,22 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     founded: 2015,
     description: [
       'LandSpace is one of China’s leading private rocket companies and a global propulsion pioneer. In July 2023 its Zhuque-2 became the first methane-fueled rocket in the world to reach orbit — beating SpaceX’s Starship and every other methalox contender to the milestone.',
-      'The company is now developing Zhuque-3, a stainless-steel reusable launcher in the Falcon 9 class, and has demonstrated vertical takeoff and landing hop tests on its path to first-stage recovery.',
+      'Its follow-up Zhuque-3, a stainless-steel reusable launcher in the Falcon 9 class, reached orbit on its December 2025 debut, and on its second flight in August 2026 landed its first stage — the first orbital-class booster landing by a Chinese company.',
     ],
     programs: [
       { name: 'Zhuque-2', blurb: 'World’s first methane-fueled rocket to reach orbit (July 2023).' },
-      { name: 'Zhuque-3', blurb: 'Stainless-steel reusable launcher in development, with VTVL hop tests flown.' },
+      { name: 'Zhuque-3', blurb: 'Stainless-steel reusable launcher; reached orbit in 2025 and landed its booster in 2026.' },
     ],
     milestones: [
       { year: 2015, text: 'Founded in Beijing as one of China’s first private launch firms.' },
       { year: 2023, text: 'Zhuque-2 becomes the first methalox rocket to reach orbit.' },
       { year: 2024, text: 'Flies a 10-kilometre-class VTVL hop test toward Zhuque-3 reusability.' },
+      { year: 2025, text: 'Zhuque-3 reaches orbit on its debut flight; the booster is lost during its landing attempt.' },
+      { year: 2026, text: 'Zhuque-3 lands its first stage — the first orbital-class booster landing by a Chinese company.' },
     ],
     achievements: [
       'First methane-fueled orbital rocket in history',
+      'First Chinese company to land an orbital-class booster',
       'Front-runner in Chinese commercial reusable launch',
     ],
     tags: ['launchers', 'methane propulsion', 'reusability', 'china newspace'],
@@ -665,16 +671,17 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     founded: 2018,
     description: [
       'Galactic Energy is among the most reliable of China’s private launch companies. Its solid-fueled Ceres-1 rocket racked up a long streak of consecutive successes from its 2020 debut — an unusual record for a young launch vehicle.',
-      'In 2023 the company performed the first sea launch by a Chinese private firm, flying Ceres-1 from a platform in the Yellow Sea. Its next act is Pallas-1, a kerosene-fueled reusable launcher in development.',
+      'In 2023 the company performed the first sea launch by a Chinese private firm, flying Ceres-1 from a platform in the Yellow Sea. Its next act, the kerosene-fueled reusable Pallas-1, reached orbit on its debut flight in 2026, with first-stage recovery attempts to follow.',
     ],
     programs: [
       { name: 'Ceres-1', blurb: 'Solid small launcher with a strong success record, flying from land and sea.' },
-      { name: 'Pallas-1', blurb: 'Reusable kerolox launcher in development.' },
+      { name: 'Pallas-1', blurb: 'Reusable kerolox launcher; reached orbit on its 2026 debut flight.' },
     ],
     milestones: [
       { year: 2018, text: 'Founded in Beijing.' },
       { year: 2020, text: 'Ceres-1 reaches orbit on its first attempt.' },
       { year: 2023, text: 'First sea launch by a private Chinese company.' },
+      { year: 2026, text: 'Pallas-1 reaches orbit on its debut flight.' },
     ],
     achievements: [
       'One of the highest early success rates of any new orbital rocket',
@@ -788,7 +795,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     founded: 2013,
     description: [
       'Gilmour Space Technologies is Australia’s leading launch company, founded by brothers Adam and James Gilmour on the Gold Coast. Its Eris rocket uses hybrid propulsion and is the first orbital-class launcher designed and built in Australia.',
-      'From its own Bowen Orbital Spaceport in Queensland, Gilmour attempted the first Australian-made orbital launches in 2025 — a national first regardless of outcome, marking Australia’s return to the launch stage after half a century.',
+      'From its own Bowen Orbital Spaceport in Queensland, Gilmour attempted the first Australian-made orbital launch in 2025; Eris was lost seconds after liftoff, but the flight marked Australia’s return to the launch stage after half a century and the company is preparing a second attempt.',
     ],
     programs: [
       { name: 'Eris', blurb: 'Hybrid-propulsion orbital launcher, the first designed and built in Australia.' },
@@ -797,7 +804,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     milestones: [
       { year: 2013, text: 'Founded on the Gold Coast by Adam and James Gilmour.' },
       { year: 2024, text: 'Bowen Orbital Spaceport licensed as Australia’s first orbital launch site.' },
-      { year: 2025, text: 'Eris makes the first orbital launch attempts by an Australian-made rocket.' },
+      { year: 2025, text: 'Eris makes the first orbital launch attempt by an Australian-made rocket, falling back seconds after liftoff.' },
     ],
     achievements: [
       'Built the first Australian-designed orbital rocket',
@@ -979,6 +986,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
       { year: 2012, text: 'Founded (as WorldVu) by Greg Wyler.' },
       { year: 2020, text: 'Bankruptcy and rescue by the UK government and Bharti Group.' },
       { year: 2023, text: 'Constellation completed; merger with Eutelsat closes.' },
+      { year: 2025, text: 'French state becomes Eutelsat’s largest shareholder in a €1.5 billion capital raise.' },
     ],
     achievements: [
       'Second-ever LEO broadband mega-constellation completed',
@@ -1403,7 +1411,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
       'The company launched its first five commercial BlueBird satellites in 2024 and has partnerships with major carriers including AT&T, Verizon and Vodafone. Its goal is to eliminate mobile dead zones by turning satellites into cell towers in space.',
     ],
     programs: [
-      { name: 'BlueBird', blurb: 'Commercial direct-to-smartphone satellites; first five launched 2024.' },
+      { name: 'BlueBird', blurb: 'Commercial direct-to-smartphone satellites; first five launched 2024, larger Block 2 craft following.' },
       { name: 'BlueWalker 3', blurb: '2022 test satellite with a 64 m² phased array.' },
     ],
     milestones: [
@@ -1411,6 +1419,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
       { year: 2022, text: 'BlueWalker 3 launches and unfolds the largest commercial array in LEO.' },
       { year: 2023, text: 'Completes the first space-based 5G call to an unmodified smartphone.' },
       { year: 2024, text: 'First five BlueBird commercial satellites launch on Falcon 9.' },
+      { year: 2026, text: 'Block 2 BlueBird launches expand the fleet to more than a dozen satellites.' },
     ],
     achievements: [
       'First space-based 5G connection to standard smartphones',
@@ -1431,7 +1440,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     founded: 2016,
     description: [
       'Capella Space was the first American commercial company to build and operate synthetic aperture radar satellites, launching its Denali testbed in 2018 and the operational Sequoia in 2020. SAR sees through clouds and darkness, imaging the Earth in all weather, day and night.',
-      'Its constellation of small radar satellites delivers on-demand, sub-half-meter imagery to defense, intelligence and commercial customers. Capella’s automated tasking lets users order an image and receive it within hours.',
+      'Its constellation of small radar satellites delivers on-demand, sub-half-meter imagery to defense, intelligence and commercial customers, with automated tasking that returns images within hours. In 2025 Capella was acquired by quantum computing company IonQ, which plans to use its satellite platform for space-based quantum-secure communications.',
     ],
     programs: [
       { name: 'Whitney/Acadia constellation', blurb: 'Evolving generations of small SAR imaging satellites.' },
@@ -1441,6 +1450,7 @@ export const MORE_STARTUPS: SpaceEntity[] = [
       { year: 2016, text: 'Founded in San Francisco by Payam Banazadeh.' },
       { year: 2018, text: 'Denali becomes the first US commercial SAR satellite in orbit.' },
       { year: 2020, text: 'Sequoia begins delivering commercial sub-meter radar imagery.' },
+      { year: 2025, text: 'Acquired by quantum computing company IonQ.' },
     ],
     achievements: [
       'First US commercial SAR satellite operator',
@@ -1699,16 +1709,17 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     founded: 2019,
     description: [
       'Space Pioneer (Beijing Tianbing Technology) made history in April 2023 when its Tianlong-2 became the first Chinese privately developed liquid-fuel rocket to reach orbit — and it did so on its first attempt, a feat few launch companies anywhere have matched.',
-      'The company is now developing Tianlong-3, a Falcon-9-class partially reusable launcher intended to loft China’s planned megaconstellations. A 2024 static-fire test accident, in which a first stage broke free and crashed near Gongyi, underscored the program’s aggressive pace.',
+      'The company followed with Tianlong-3, a Falcon-9-class partially reusable launcher intended to loft China’s planned megaconstellations. A 2024 static-fire test accident, in which a first stage broke free and crashed near Gongyi, underscored the program’s aggressive pace, and Tianlong-3’s April 2026 debut launch ended in failure during ascent.',
     ],
     programs: [
       { name: 'Tianlong-2', blurb: 'Liquid-fuel orbital rocket; first Chinese private liquid launcher to orbit (2023).' },
-      { name: 'Tianlong-3', blurb: 'Falcon-9-class reusable launcher in development for megaconstellation launches.' },
+      { name: 'Tianlong-3', blurb: 'Falcon-9-class reusable launcher for megaconstellation launches; debut flight failed in 2026.' },
     ],
     milestones: [
       { year: 2019, text: 'Founded in Beijing as Tianbing Technology.' },
       { year: 2023, text: 'Tianlong-2 reaches orbit on its first attempt — a Chinese private first for liquid fuel.' },
       { year: 2024, text: 'Tianlong-3 first stage breaks free during a static-fire test and crashes.' },
+      { year: 2026, text: 'Tianlong-3 fails during its debut launch from Jiuquan.' },
     ],
     achievements: [
       'First Chinese private liquid-fuel rocket to reach orbit',
@@ -1788,16 +1799,17 @@ export const MORE_STARTUPS: SpaceEntity[] = [
     founded: 2017,
     description: [
       'INNOSPACE is a South Korean launch startup specializing in hybrid propulsion, which pairs solid fuel with a liquid oxidizer for simplicity and safety. In March 2023 its HANBIT-TLV suborbital test rocket flew from Brazil’s Alcântara spaceport — the first launch by a Korean private company, and a milestone for Alcântara’s commercial ambitions too.',
-      'The company is now developing HANBIT-Nano, a small orbital launcher, and listed on Korea’s KOSDAQ exchange to fund it. It aims to serve smallsat customers across Asia and South America.',
+      'Its HANBIT-Nano small launcher made the first orbital attempt by a Korean private company in December 2025, again from Alcântara, but was lost about eighty seconds into flight. The company, listed on Korea’s KOSDAQ exchange, is preparing a second attempt to serve smallsat customers across Asia and South America.',
     ],
     programs: [
       { name: 'HANBIT-TLV', blurb: 'Hybrid-propulsion suborbital test rocket flown from Alcântara in 2023.' },
-      { name: 'HANBIT-Nano', blurb: 'Small orbital launcher in development for ~90 kg payloads.' },
+      { name: 'HANBIT-Nano', blurb: 'Small orbital launcher for ~90 kg payloads; first flight in December 2025 failed shortly after liftoff.' },
     ],
     milestones: [
       { year: 2017, text: 'Founded by Soojong Kim in South Korea.' },
       { year: 2023, text: 'HANBIT-TLV flies from Alcântara — the first Korean private launch.' },
       { year: 2024, text: 'Lists on KOSDAQ to fund HANBIT-Nano development.' },
+      { year: 2025, text: 'HANBIT-Nano makes the first orbital attempt by a Korean private company; it is lost soon after liftoff.' },
     ],
     achievements: [
       'First launch by a South Korean private company',

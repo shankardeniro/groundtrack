@@ -120,22 +120,23 @@ export const MORE_AGENCIES: SpaceEntity[] = [
     founded: 1989,
     description: [
       'The Canadian Space Agency, based near Montreal, is famous for space robotics: the Canadarm flew on the Space Shuttle, and Canadarm2 has assembled and maintained the International Space Station for over two decades. Canada’s RADARSAT satellites are world leaders in radar Earth observation.',
-      'Canada is contributing Canadarm3 to NASA’s lunar Gateway station, and in return astronaut Jeremy Hansen was assigned to Artemis II — set to make him the first non-American to fly around the Moon. The CSA also runs a respected astronaut corps and space science program.',
+      'Canada is contributing Canadarm3 to NASA’s lunar Gateway station, and in return astronaut Jeremy Hansen flew around the Moon on Artemis II in 2026 — the first non-American ever to make a lunar voyage. The CSA also runs a respected astronaut corps and space science program.',
     ],
     programs: [
       { name: 'Canadarm3', blurb: 'AI-assisted robotic arm for NASA’s lunar Gateway station.' },
       { name: 'RADARSAT Constellation', blurb: 'Trio of radar satellites monitoring Canada’s land, ice, and oceans.' },
-      { name: 'Astronaut program', blurb: 'Canadian astronauts fly with NASA to the ISS and, soon, the Moon.' },
+      { name: 'Astronaut program', blurb: 'Canadian astronauts fly with NASA to the ISS and, with Artemis II, around the Moon.' },
     ],
     milestones: [
       { year: 1989, text: 'Founded, consolidating Canada’s space programs.' },
       { year: 2001, text: 'Canadarm2 installed on the International Space Station.' },
       { year: 2019, text: 'RADARSAT Constellation Mission launched.' },
       { year: 2023, text: 'Jeremy Hansen assigned to Artemis II, the first lunar mission seat for a non-American.' },
+      { year: 2026, text: 'Jeremy Hansen flies around the Moon on Artemis II, the first non-American on a lunar mission.' },
     ],
     achievements: [
       'World leader in space robotics with the Canadarm family',
-      'First non-US astronaut assigned to a lunar mission',
+      'First non-US astronaut to fly around the Moon',
       'Decades of radar Earth observation with RADARSAT',
     ],
     tags: ['robotics', 'earth observation', 'human spaceflight', 'moon'],
@@ -383,6 +384,7 @@ export const MORE_AGENCIES: SpaceEntity[] = [
       { year: 2019, text: 'Egypt selected to host the African Space Agency headquarters.' },
       { year: 2023, text: 'Satellite assembly and test facilities open at the Egyptian Space City.' },
       { year: 2024, text: 'NExSat-1 Earth-observation satellite launches.' },
+      { year: 2025, text: 'African Space Agency headquarters inaugurated at the Egyptian Space City.' },
     ],
     achievements: [
       'Hosts the headquarters of the African Space Agency',
@@ -684,7 +686,7 @@ export const MORE_AGENCIES: SpaceEntity[] = [
     founded: 1987,
     description: [
       'The Norwegian Space Agency (Norsk Romsenter) anchors a space ecosystem shaped by Norway’s geography: the Andøya launch site above the Arctic Circle, and the Svalbard satellite station — one of the best-placed polar ground stations on Earth. Maritime surveillance is a national specialty.',
-      'Norway’s AISSat and NorSat smallsats track ship traffic across vast northern waters, and the country is a long-standing ESA member with strengths in Earth observation and communications. Andøya Spaceport hosted its first orbital launch attempt, by Isar Aerospace, in 2025.',
+      'Norway’s AISSat and NorSat smallsats track ship traffic across vast northern waters, and the country is a long-standing ESA member with strengths in Earth observation and communications. Andøya Spaceport hosted its first orbital launch attempt, by Isar Aerospace, in 2025 — and Isar’s Spectrum reached orbit from the site in 2026.',
     ],
     programs: [
       { name: 'Maritime smallsats', blurb: 'AISSat and NorSat satellites monitoring ship traffic in Arctic waters.' },
@@ -696,6 +698,7 @@ export const MORE_AGENCIES: SpaceEntity[] = [
       { year: 2010, text: 'AISSat-1 begins national maritime monitoring from orbit.' },
       { year: 2023, text: 'Andøya Spaceport officially opens for orbital launches.' },
       { year: 2025, text: 'First orbital launch attempt from Andøya by Isar Aerospace.' },
+      { year: 2026, text: 'Isar Aerospace’s Spectrum reaches orbit from Andøya on its second flight.' },
     ],
     achievements: [
       'Built a world-leading maritime surveillance smallsat capability',

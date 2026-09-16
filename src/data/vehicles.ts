@@ -96,7 +96,7 @@ export const VEHICLES: VehicleSpec[] = [
       engines: 'Kalam solids + Raman liquid',
       propellant: 'Solid / liquid',
       payloadLeo: '≈300–480 kg',
-      firstFlight: 'In development',
+      firstFlight: '2026',
     },
   },
   {
@@ -141,9 +141,9 @@ export const VEHICLES: VehicleSpec[] = [
   {
     entityIds: ['relativity'],
     name: 'Terran R',
-    heightM: 82,
+    heightM: 87,
     stats: {
-      diameter: '5.5 m',
+      diameter: '5.4 m',
       stages: '2',
       engines: '13 × Aeon R',
       propellant: 'Methane / LOX',
