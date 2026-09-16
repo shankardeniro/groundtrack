@@ -286,12 +286,13 @@ select {
   position: fixed;
   left: 14px;
   bottom: 14px;
-  background: var(--glass-1);
-  border: 1px solid var(--glass-border);
+  background: var(--glass-clear);
+  border: 1px solid var(--glass-clear-border);
   border-radius: var(--r-card);
   padding: var(--sp-3);
   z-index: 15;
-  backdrop-filter: blur(var(--blur-1));
+  box-shadow: var(--shadow-float), var(--glass-clear-highlight);
+  backdrop-filter: var(--backdrop-clear);
   max-width: 230px;
 }
 /* Eyebrow with the neutral mixed-category dot — the legend indexes them all. */
@@ -333,7 +334,7 @@ select {
   height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
-  box-shadow: 0 0 6px currentColor;
+  box-shadow: 0 0 2px currentColor;
 }
 
 /* ────────────── panels & cards ────────────── */
@@ -806,14 +807,14 @@ select {
   left: 0;
   z-index: 40;
   pointer-events: none;
-  background: var(--glass-1);
-  border: 1px solid var(--glass-border);
+  background: var(--glass-clear);
+  border: 1px solid var(--glass-clear-border);
   border-radius: var(--r-control);
   padding: var(--sp-2) 11px;
   font-size: var(--fs-ui);
   max-width: 280px;
-  box-shadow: var(--shadow-float);
-  backdrop-filter: blur(var(--blur-1));
+  box-shadow: var(--shadow-float), var(--glass-clear-highlight);
+  backdrop-filter: var(--backdrop-clear);
 }
 #tooltip strong {
   font-size: var(--fs-sub);
