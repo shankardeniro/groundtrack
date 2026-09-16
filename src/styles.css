@@ -429,12 +429,12 @@ select {
   right: 14px;
   bottom: 14px;
   width: min(420px, calc(100vw - 28px));
-  background: var(--glass-2);
-  border: 1px solid var(--glass-border-strong);
+  background: var(--glass-clear);
+  border: 1px solid var(--glass-clear-border);
   border-radius: var(--r-panel);
   z-index: 25;
-  backdrop-filter: blur(var(--blur-2));
-  box-shadow: var(--shadow-card);
+  backdrop-filter: var(--backdrop-clear);
+  box-shadow: var(--shadow-card), var(--glass-clear-highlight);
   animation: slide-in var(--t-slide) var(--ease);
   overflow: hidden;
 }
