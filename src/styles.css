@@ -252,7 +252,13 @@ select {
   margin-left: auto;
   padding-left: var(--sp-3);
 }
+#country-wrap {
+  position: relative;
+}
 #country-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
   padding: 9px 10px;
   border-radius: var(--r-control);
   border: 1px solid var(--glass-clear-border);
@@ -260,7 +266,77 @@ select {
   box-shadow: var(--glass-clear-highlight);
   backdrop-filter: var(--backdrop-clear);
   color: var(--text);
+  font-family: inherit;
   font-size: var(--fs-ui);
+  cursor: pointer;
+  transition: border-color var(--t-fast) var(--ease);
+}
+#country-filter:hover,
+#country-filter[aria-expanded='true'] {
+  border-color: var(--accent);
+}
+#country-filter:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--glass-clear-highlight);
+}
+.country-caret {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--muted);
+  transition: transform var(--t-fast) var(--ease);
+}
+#country-filter[aria-expanded='true'] .country-caret {
+  transform: rotate(180deg);
+}
+#country-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 220px;
+  max-height: min(60vh, 420px);
+  overflow-y: auto;
+  padding: 4px;
+  background: var(--glass-clear);
+  border: 1px solid var(--glass-clear-border);
+  border-radius: var(--r-card);
+  backdrop-filter: var(--backdrop-clear);
+  box-shadow: var(--shadow-card), var(--glass-clear-highlight);
+  z-index: 30;
+}
+.country-opt {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  padding: 7px 10px;
+  background: none;
+  border: none;
+  border-radius: 7px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: var(--fs-ui);
+  text-align: left;
+  cursor: pointer;
+}
+.country-opt:hover,
+.country-opt.active {
+  background: var(--accent-soft);
+}
+.country-opt[aria-selected='true'] {
+  color: #fff;
+  font-weight: 600;
+}
+.country-check {
+  width: 12px;
+  font-size: 11px;
+  color: var(--accent);
+  opacity: 0;
+}
+.country-opt[aria-selected='true'] .country-check {
+  opacity: 1;
 }
 #tour-btn,
 #reset-btn {

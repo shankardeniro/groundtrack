@@ -28,7 +28,12 @@
         <input id="search" type="search" placeholder="Search organizations, cities, tags…" aria-label="Search organizations" autocomplete="off" />
         <div id="search-results" role="listbox" hidden></div>
       </div>
-      <select id="country-filter" aria-label="Filter by country"></select>
+      <div id="country-wrap">
+        <button id="country-filter" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Filter by country">
+          <span id="country-label">All countries</span><span class="country-caret" aria-hidden="true"></span>
+        </button>
+        <div id="country-menu" role="listbox" aria-label="Countries" hidden></div>
+      </div>
       <button id="tour-btn" title="Guided tour of global highlights">✦ Take the tour</button>
       <button id="reset-btn" title="Reset view" aria-label="Reset map view">⌂</button>
     </header>

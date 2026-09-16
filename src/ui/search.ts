@@ -1,6 +1,7 @@
 import { CATEGORIES } from '../types';
 import type { SpaceEntity } from '../types';
 import { ENTITIES } from '../data/entities';
+import { CountryPicker } from './country-picker';
 
 export interface SearchCallbacks {
   onSelectEntity(e: SpaceEntity): void;
@@ -11,15 +12,12 @@ export interface SearchCallbacks {
 export class Search {
   private input = document.getElementById('search') as HTMLInputElement;
   private results = document.getElementById('search-results') as HTMLElement;
-  private countrySel = document.getElementById('country-filter') as HTMLSelectElement;
   private matches: SpaceEntity[] = [];
   private active = -1;
 
   constructor(private cb: SearchCallbacks) {
     const countries = [...new Set(ENTITIES.map((e) => e.country))].sort();
-    this.countrySel.innerHTML =
-      `<option value="">All countries</option>` + countries.map((c) => `<option>${c}</option>`).join('');
-    this.countrySel.addEventListener('change', () => this.cb.onCountryFilter(this.countrySel.value || null));
+    new CountryPicker(countries, (c) => this.cb.onCountryFilter(c));
 
     this.input.addEventListener('input', () => this.update());
     this.input.addEventListener('keydown', (ev) => this.onKey(ev));
