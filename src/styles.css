@@ -659,13 +659,13 @@ select {
   bottom: 22px;
   transform: translateX(-50%);
   width: min(520px, calc(100vw - 28px));
-  background: var(--glass-2);
-  border: 1px solid var(--glass-border-strong);
+  background: var(--glass-clear);
+  border: 1px solid var(--glass-clear-border);
   border-radius: var(--r-panel);
   padding: var(--sp-4) var(--sp-5);
   z-index: 30;
-  backdrop-filter: blur(var(--blur-2));
-  box-shadow: var(--shadow-card);
+  backdrop-filter: var(--backdrop-clear);
+  box-shadow: var(--shadow-card), var(--glass-clear-highlight);
   animation: slide-up var(--t-slide) var(--ease);
 }
 @keyframes slide-up {
@@ -853,12 +853,12 @@ select {
   max-width: 320px;
   max-height: 50vh;
   overflow-y: auto;
-  background: var(--glass-2);
-  border: 1px solid var(--glass-border-strong);
+  background: var(--glass-clear);
+  border: 1px solid var(--glass-clear-border);
   border-radius: var(--r-card);
   padding: var(--sp-2);
-  backdrop-filter: blur(var(--blur-2));
-  box-shadow: var(--shadow-card);
+  backdrop-filter: var(--backdrop-clear);
+  box-shadow: var(--shadow-card), var(--glass-clear-highlight);
   animation: pop-in var(--t-base) var(--ease);
 }
 @keyframes pop-in {
