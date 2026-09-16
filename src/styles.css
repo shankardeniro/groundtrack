@@ -201,8 +201,10 @@ select {
   width: 100%;
   padding: 9px 14px;
   border-radius: var(--r-control);
-  border: 1px solid var(--glass-border);
-  background: var(--glass-1);
+  border: 1px solid var(--glass-clear-border);
+  background: var(--glass-clear);
+  box-shadow: var(--glass-clear-highlight);
+  backdrop-filter: var(--backdrop-clear);
   color: var(--text);
   font-size: var(--fs-ui);
   outline: none;
@@ -213,7 +215,7 @@ select {
 }
 #search:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--glass-clear-highlight);
 }
 #search-results {
   position: absolute;
@@ -253,8 +255,10 @@ select {
 #country-filter {
   padding: 9px 10px;
   border-radius: var(--r-control);
-  border: 1px solid var(--glass-border);
-  background: var(--glass-1);
+  border: 1px solid var(--glass-clear-border);
+  background: var(--glass-clear);
+  box-shadow: var(--glass-clear-highlight);
+  backdrop-filter: var(--backdrop-clear);
   color: var(--text);
   font-size: var(--fs-ui);
 }
